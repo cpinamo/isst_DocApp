@@ -22,7 +22,7 @@ public class FormNuevoMedAdminServlet extends HttpServlet{
 	String name = req.getParameter("name");
 	String password = req.getParameter("password");
 	String dni = req.getParameter("dni");
-	String especialidad = req.getParameter("especialidad");
+	String especialidad = req.getParameter("especialidades");
 		
 	Medico medico = new Medico();
 	medico.setEmail(email);

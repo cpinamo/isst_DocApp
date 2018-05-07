@@ -15,6 +15,7 @@
 <p>DNI: ${medico.dni }</p>
 <p>Nombre: ${medico.name }</p>
 <p>Email: ${medico.email }</p>
+<p>Especialidad: ${medico.especialidad }</p>
 
 <table border = "1">
 <tr>
