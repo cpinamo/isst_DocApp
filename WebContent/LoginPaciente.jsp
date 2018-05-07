@@ -16,6 +16,8 @@
 <p>Nombre: ${paciente.name }</p>
 <p>Email: ${paciente.email }</p>
 
+<a href="Form1CitaServlet">Pedir Cita</a>
+
 <table border = "1">
 <tr>
 <th>Identificación</th>
