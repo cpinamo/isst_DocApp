@@ -20,6 +20,12 @@
 		<option value = "3">3</option>
 		<option value = "4">4</option>
 </select>
+<select name="dia">
+	<option value="" disabled selected>Elija un dia</option>
+		<c:forEach items = "${horas_doctor_disponibles}" var="horasi">
+			<option value = ${ horasi}></option> 
+		</c:forEach>
+</select>
 
 <select name="hora">
 	<option value="" disabled selected>Elija una hora</option>

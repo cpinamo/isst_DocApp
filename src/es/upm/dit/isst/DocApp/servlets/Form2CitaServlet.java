@@ -1,7 +1,9 @@
 package es.upm.dit.isst.DocApp.servlets;
 
 import java.io.IOException;
+
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import javax.servlet.ServletException;
@@ -17,6 +19,7 @@ import es.upm.dit.isst.DocApp.dao.model.Medico;
 @WebServlet("/Form2CitaServlet")
 public class Form2CitaServlet extends HttpServlet{
 
+	@SuppressWarnings("deprecation")
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
 	throws ServletException, IOException {
@@ -44,6 +47,9 @@ public class Form2CitaServlet extends HttpServlet{
 			
 		}
 	}
+	
+	
+	
 	req.getSession().setAttribute("medico_especial", medico_especial);
 	
 	resp.sendRedirect(req.getContextPath() + "/Form2Cita.jsp");

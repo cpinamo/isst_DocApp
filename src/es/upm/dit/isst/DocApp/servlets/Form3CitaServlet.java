@@ -30,22 +30,32 @@ public class Form3CitaServlet extends HttpServlet{
 		List<Cita> citas_list = CitaDAOImplementation.getInstance().readAllCita();
 		req.getSession().setAttribute("citas_list", citas_list);
 		
+		
 		List<Cita> citas_doctor = new ArrayList<>();
 		List<String> horas_doctor = new ArrayList<>();
+		List<String> horas_doctor_disponibles = new ArrayList<>();
+		horas_doctor_disponibles.add("9:00");
 		
-		//for (Cita cit: citas_list) {
-			//System.out.println("Comprobacion");
-			//System.out.println(cit.getEspecialidad());
-			//System.out.println(especialidad);
-			//System.out.println(med.getName());
-			//System.out.println("--------------------");
-			//if (cit.getMedicoCita().equals(doctor) ) {
-				//System.out.println("ha entrado");
-				//citas_doctor.add(cit);
-				
+
+		System.out.println("Comprobacion");
+		System.out.println(citas_list.size());
+		if(citas_list.size() != 0) {
+			//for (Cita cit: citas_list) {
+				//CitaDAOImplementation.getInstance().deleteCita(cit);
+//				System.out.println("--------------------");
+//				System.out.println(doctor);
+//				System.out.println(cit.toString());
+//				//System.out.println(med.getName());
+//				System.out.println("--------------------");
+//				if (cit.getMedicoCita().equals(doctor) ) {
+//					System.out.println("ha entrado");
+//					citas_doctor.add(cit);
+//					
+//				}
 			//}
-		//}
-		//req.getSession().setAttribute("citas_doctor", citas_doctor);
+		req.getSession().setAttribute("citas_doctor", citas_doctor);
+		req.getSession().setAttribute("horas_doctor_disponibles", horas_doctor_disponibles);
+
 		
 		
 		//for (Cita cit: citas_doctor) {
@@ -73,6 +83,7 @@ public class Form3CitaServlet extends HttpServlet{
 	
 	
 	
+}
 }
 
 

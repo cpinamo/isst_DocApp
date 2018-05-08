@@ -20,11 +20,13 @@ public class Form4CitaServlet extends HttpServlet{
 		
 		String dia = req.getParameter("dia");
 		String hora = req.getParameter("hora");
+		//String Medico = req.getParameter("")
 		
 		Cita cita = new Cita();
 		
 		cita.setDia(dia);
 		cita.setHora(hora);
+		//cita.setMedicoCita();
 		
 		CitaDAOImplementation.getInstance().createCita(cita);
 		resp.sendRedirect(req.getContextPath() + "/FormLogin.jsp");

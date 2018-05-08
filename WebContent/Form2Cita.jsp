@@ -19,8 +19,16 @@
 		</c:forEach>
 </select>
 
+<select name="diaCita">
+<option value="" disabled selected>Elija un dia</option>
+		<c:forEach items = "${medico_especial}" var="medicoi">
+			<option value = ${ medicoi.email}> ${medicoi.name}</option> 
+		</c:forEach>
 
-<input type = "submit">Elegir doctor</input>
+</select>
+
+
+<input type = "submit">Elegir doctor y dia</input>
 
 </form>
 </body>

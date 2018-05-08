@@ -59,6 +59,12 @@ public class Cita implements Serializable{
 		return medicoCita;
 	}
 
+	@Override
+	public String toString() {
+		return "Cita [dia=" + dia + ", hora=" + hora + ", id=" + id + ", medicoCita=" + medicoCita + ", pacienteCita="
+				+ pacienteCita + "]";
+	}
+
 	public void setMedicoCita(Medico medicoCita) {
 		this.medicoCita = medicoCita;
 	}
