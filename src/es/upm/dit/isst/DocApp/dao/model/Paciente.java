@@ -30,8 +30,22 @@ public class Paciente implements Serializable{
 	@ManyToMany(fetch=FetchType.EAGER, mappedBy="pacientes", cascade= {CascadeType.MERGE, CascadeType.PERSIST})
 	private List<Medico> doctores;
 	
+	@OneToMany(mappedBy="pacienteCita", fetch = FetchType.EAGER)
+	private List<Cita> citasPaciente;
+	
 	public Paciente(){
 		this.doctores = new ArrayList<>();
+		this.citasPaciente = new ArrayList<>();
+	}
+
+
+	public List<Cita> getCitasPaciente() {
+		return citasPaciente;
+	}
+
+
+	public void setCitasPaciente(List<Cita> citasPaciente) {
+		this.citasPaciente = citasPaciente;
 	}
 
 

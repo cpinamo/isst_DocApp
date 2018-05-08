@@ -9,6 +9,7 @@
 <title>Formulario de petición de cita</title>
 </head>
 <body>
+<h2> Elegir médico </h2>
 <form action = "Form3CitaServlet">
 
 <select name="doctorCita">

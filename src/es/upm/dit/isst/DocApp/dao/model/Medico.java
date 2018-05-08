@@ -11,6 +11,7 @@ import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 
+
 @Entity
 public class Medico implements Serializable {
 	
@@ -23,9 +24,21 @@ public class Medico implements Serializable {
 	
 	@ManyToMany(fetch=FetchType.EAGER, cascade= {CascadeType.PERSIST,CascadeType.MERGE})
 	private List<Paciente> pacientes;
+	
+	@OneToMany(mappedBy="medicoCita", fetch = FetchType.EAGER)
+	private List<Cita> citasMedico;
 
 	public Medico() {
 		this.pacientes = new ArrayList<>();
+		this.citasMedico = new ArrayList<>();
+	}
+
+	public List<Cita> getCitasMedico() {
+		return citasMedico;
+	}
+
+	public void setCitasMedico(List<Cita> citasMedico) {
+		this.citasMedico = citasMedico;
 	}
 
 	public String getPassword() {

@@ -1,3 +1,5 @@
+
+<h2> Elegir especialidad </h2>
 <form action = "Form2CitaServlet">
 
 <select name="especialidades">
