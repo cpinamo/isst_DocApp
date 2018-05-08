@@ -10,7 +10,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import es.upm.dit.isst.DocApp.dao.CitaDAOImplementation;
 import es.upm.dit.isst.DocApp.dao.MedicoDAOImplementation;
+import es.upm.dit.isst.DocApp.dao.model.Cita;
 import es.upm.dit.isst.DocApp.dao.model.Medico;
 import es.upm.dit.isst.DocApp.dao.PacienteDAOImplementation;
 import es.upm.dit.isst.DocApp.dao.model.Paciente;
@@ -24,8 +26,53 @@ public class Form3CitaServlet extends HttpServlet{
 	throws ServletException, IOException {
 		String medico = req.getParameter("doctorCita");
 		Medico doctor = MedicoDAOImplementation.getInstance().readMedico(medico);
+		
+		List<Cita> citas_list = CitaDAOImplementation.getInstance().readAllCita();
+		req.getSession().setAttribute("citas_list", citas_list);
+		
+		List<Cita> citas_doctor = new ArrayList<>();
+		List<String> horas_doctor = new ArrayList<>();
+		
+		//for (Cita cit: citas_list) {
+			//System.out.println("Comprobacion");
+			//System.out.println(cit.getEspecialidad());
+			//System.out.println(especialidad);
+			//System.out.println(med.getName());
+			//System.out.println("--------------------");
+			//if (cit.getMedicoCita().equals(doctor) ) {
+				//System.out.println("ha entrado");
+				//citas_doctor.add(cit);
+				
+			//}
+		//}
+		//req.getSession().setAttribute("citas_doctor", citas_doctor);
+		
+		
+		//for (Cita cit: citas_doctor) {
+			//for (int i = 1; i<32; i++) {
+				//for(int j=9; j<20; j++) {
+				
+			//System.out.println("Comprobacion");
+			//System.out.println(cit.getEspecialidad());
+			//System.out.println(especialidad);
+			//System.out.println(med.getName());
+			//System.out.println("--------------------");
+		
+				//if ((Integer.parseInt(cit.getDia()) != i) && (Integer.parseInt(cit.getHora()) != i)){
+					
+				//}
+				//System.out.println("ha entrado");
+				
+				
+				
+			//}
+		//}
+		
+		resp.sendRedirect(req.getContextPath() + "/Form3Cita.jsp");
 	}
 	
 	
 	
 }
+
+

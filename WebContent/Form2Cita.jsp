@@ -20,7 +20,7 @@
 </select>
 
 
-<input type = "submit">Elegir especialidad</input>
+<input type = "submit">Elegir doctor</input>
 
 </form>
 </body>
