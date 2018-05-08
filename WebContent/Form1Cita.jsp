@@ -1,4 +1,4 @@
-<form action = "Form1PacienteServlet">
+<form action = "Form2CitaServlet">
 
 <select name="especialidades">
 	<option value="" disabled selected>Elija una especialidad</option>
