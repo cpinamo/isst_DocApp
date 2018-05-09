@@ -41,5 +41,9 @@
 <button type = "submit">Cerrar sesión</button>
 </form>
 
+<form action = "FormBajaServlet">
+<button type = "submit">Darse de baja</button>
+</form>
+
 </body>
 </html>
