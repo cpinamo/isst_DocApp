@@ -50,7 +50,7 @@
   <!--doctor team-->
   <section id="doctor-team" class="section-padding">
     <div class="container jumbotron">
-
+<%@ include file = "FormLogin.jsp" %>
     </div>
   </section>
   <!--/ doctor team-->
