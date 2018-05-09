@@ -20,6 +20,8 @@
 
 <button class="col-lg-offset-1 col-lg-4" type="submit"> Crear nuevo médico </button>
 
+<p>Date: <input type="text" id="datepicker" name="datepicker"></p>
+
 <br><br>
 
 </form>

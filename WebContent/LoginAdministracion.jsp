@@ -52,15 +52,17 @@
 <%@ include file = "FormNuevoPacAdmin.jsp" %>
 
 <h4>Listado de pacientes</h4>
-<table class="table table-hover" id="Table">
-<tr>
-<th class="col-lg-2">DNI</th>
-<th class="col-lg-3">Nombre</th>
-<th class="col-lg-3">Apellido</th>
-<th class="col-lg-1">Edad</th>
-<th class="col-lg-3">Estado</th>
+<table class="table table-hover Table">
+<thead>
+	<tr>
+	<th class="col-lg-2">DNI</th>
+	<th class="col-lg-3">Nombre</th>
+	<th class="col-lg-3">Apellido</th>
+	<th class="col-lg-1">Edad</th>
+	<th class="col-lg-3">Estado</th>
 </tr>
-
+</thead>
+<tbody>
 <c:forEach items = "${paciente_list}" var="pacientei">
 <tr>
 <td>${pacientei.dni}</td>
@@ -71,6 +73,7 @@
 
 </tr>
 </c:forEach>
+</tbody>
 
 </table>
 
@@ -78,7 +81,8 @@
 <%@ include file = "FormNuevoMedAdmin.jsp" %>
 
 <h4>Listado de médicos</h4>
-<table class="table table-hover" id="Table" >
+<table class="table table-hover Table" >
+<thead>
 <tr>
 <th>Identificación</th>
 <th>Nombre</th>
@@ -86,7 +90,8 @@
 <th>Email</th>
 
 </tr>
-
+</thead>
+<tbody>
 <c:forEach items = "${medico_list}" var="medicoi">
 <tr>
 <td>${medicoi.dni}</td>
@@ -95,8 +100,14 @@
 <td>${medicoi.email}</td>
 </tr>
 </c:forEach>
+</tbody>
+
 
 </table>
+
+
+
+
 
 <form action = "LogoutServlet">
 <button type = "submit">Cerrar sesión</button>
@@ -110,20 +121,31 @@
   <!--/ banner-->
 	<script>
 	//DataTable
-	//DataTable
-	var aTable = $('#Tabla');
-	aTable.DataTable( {
-        "scrollX": true,
-        "ordering": false, 
-        "searching": false,
-        "aLengthMenu": [[5, 10, 25, -1], [5, 10, 25, "Todas"]],
-        "pageLength": 52,
-        "paging": true,
-        "orderClasses": false,
-    } );
-	
-	aTable.DataTable().page.len(5).draw();
 
+	$(document).ready(function() {
+		var aTable = $('.Table').DataTable({
+    		"scrollY": true,
+            "ordering": true, 
+            "searching": true,
+            "aLengthMenu": [[5, 10, 25, -1], [5, 10, 25, "Todas"]],
+            "pageLength": 1,
+            "paging": true,
+            "orderClasses": false,	
+    });});
+
+	  
+	  
+	  
+		var date = new Date();
+		var currentMonth = date.getMonth();
+		var currentDate = date.getDate();
+		var currentYear = date.getFullYear();
+		
+		$('#datepicker').datepicker({
+			minDate: new Date(currentYear, currentMonth, currentDate),
+			maxDate: new Date(currentYear, currentMonth+1, currentDate),
+			dateFormat: "dd/mm/yy"
+		}).val();
 
 	</script>
 </body>

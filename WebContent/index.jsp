@@ -47,7 +47,7 @@
             <div class="banner-text text-center">
               <h1 class="white">DocAPP</h1>
               <p>La página que te permite reservar todas tus citas medicas de una forma sencilla <br>AQUI PONED LO QUE QUERAIS O QUITARLO</p>
-              <a href="reservar.jsp" class="btn btn-appoint">Login</a>
+              <a href="reservar.jsp" class="btn btn-appoint">Inicia sesión aquí</a>
             </div>
           </div>
         </div>

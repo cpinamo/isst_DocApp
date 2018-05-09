@@ -1,6 +1,9 @@
 package es.upm.dit.isst.DocApp.servlets;
 
 import java.io.IOException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -23,6 +26,32 @@ public class FormNuevoMedAdminServlet extends HttpServlet{
 	String password = req.getParameter("password");
 	String dni = req.getParameter("dni");
 	String especialidad = req.getParameter("especialidades");
+	
+	String fecha = req.getParameter("datepicker");
+	try {
+		Date date = new SimpleDateFormat("dd/mm/yy").parse(fecha);
+		
+
+		System.out.println("---");
+		System.out.println("---");
+		System.out.println("---");
+		System.out.println("---");
+		System.out.println("---");
+
+		System.out.println(date);
+		
+		System.out.println("---");
+		System.out.println("---");
+		System.out.println("---");
+		System.out.println("---");
+		System.out.println("---");
+	} catch (ParseException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+	
+	
+	
 		
 	Medico medico = new Medico();
 	medico.setEmail(email);
