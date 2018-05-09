@@ -148,6 +148,14 @@
 		}).val();
 
 	</script>
+	
+	<!--footer-->
+  <footer id="footer">
+     <%@ include file="Templates/Footer.html" %>
+  </footer>
+  <!--/ footer-->
+  
+ <%@ include file="Templates/Imports.html" %>
 </body>
 
 </html>
