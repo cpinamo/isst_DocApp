@@ -10,6 +10,6 @@
 <input type = "text" name= "domicilio" placeholder = "Dirección Completa"/>
 
 
-<input type="submit"> Crear nuevo paciente </input>
+<button type="submit"> Crear nuevo paciente </button>
 
 </form>

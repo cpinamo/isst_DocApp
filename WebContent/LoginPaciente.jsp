@@ -37,7 +37,9 @@
 
 </table>
 
-
+<form action = "LogoutServlet">
+<button type = "submit">Cerrar sesión</button>
+</form>
 
 </body>
 </html>

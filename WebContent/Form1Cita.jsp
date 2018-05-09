@@ -11,6 +11,6 @@
 </select>
 
 
-<input type = "submit">Elegir especialidad</input>
+<button type = "submit">Elegir especialidad</button>
 
 </form>

@@ -28,7 +28,7 @@
 </select>
 
 
-<input type = "submit">Elegir doctor y dia</input>
+<button type = "submit">Elegir doctor y dia</button>
 
 </form>
 </body>

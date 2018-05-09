@@ -12,6 +12,6 @@
 <input type = "number" name= "dni" placeholder = "DNI"/>
 <input type = "password" name= "password" placeholder = "Contraseña"/>
 
-<input type="submit"> Crear nuevo médico </input>
+<button type="submit"> Crear nuevo médico </button>
 
 </form>

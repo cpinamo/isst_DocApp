@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Vista del tutor</title>
+<title>Vista del médico</title>
 </head>
 <body>
 
@@ -37,6 +37,10 @@
 </c:forEach>
 
 </table>
+
+<form action = "LogoutServlet">
+<button type = "submit">Cerrar sesión</button>
+</form>
 
 </body>
 </html>
