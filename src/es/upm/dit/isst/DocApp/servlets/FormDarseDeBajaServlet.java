@@ -27,20 +27,19 @@ public class FormDarseDeBajaServlet extends HttpServlet{
 		Integer dni2 = Integer.parseInt(dniIntroducido);
 		for (Paciente p : paciente_list) {
 			
-				if (p.getDni()==dni2) {
-					if (p.getPassword().equals(passwordIntroducido)) {
-
-	
+				if ((p.getDni()==dni2) && (p.getPassword().equals(passwordIntroducido))) {
 						PacienteDAOImplementation.getInstance().deletePaciente(p);
 						resp.sendRedirect(req.getContextPath() + "/Form1DarseDeBaja.jsp");
-					}
+				}
+				else {
+					resp.sendRedirect(req.getContextPath() + "/FormDarseDeBaja.jsp");
 				}
 			
 
 		}
 	
 	
-	resp.sendRedirect(req.getContextPath() + "/FormDarseDeBaja.jsp");
+	
 	
 	}
 	
