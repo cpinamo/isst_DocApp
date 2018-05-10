@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import es.upm.dit.isst.DocApp.dao.MedicoDAOImplementation;
+import es.upm.dit.isst.DocApp.dao.PacienteDAOImplementation;
 import es.upm.dit.isst.DocApp.dao.model.Medico;
 
 @WebServlet("/FormNuevoMedAdminServlet")
@@ -61,6 +62,8 @@ public class FormNuevoMedAdminServlet extends HttpServlet{
 	medico.setEspecialidad(especialidad);
 
 	MedicoDAOImplementation.getInstance().createMedico(medico);
+	
+	req.getSession().setAttribute("medico_list", MedicoDAOImplementation.getInstance().readAllMedico());
 
 	resp.sendRedirect(req.getContextPath() + "/LoginAdministracion.jsp");
 	}

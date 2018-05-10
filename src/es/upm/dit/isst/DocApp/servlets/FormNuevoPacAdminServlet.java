@@ -39,7 +39,9 @@ public class FormNuevoPacAdminServlet extends HttpServlet{
 	paciente.setDomicilio(domicilio);
 
 	PacienteDAOImplementation.getInstance().createPaciente(paciente);
-
+	
+	req.getSession().setAttribute("paciente_list", PacienteDAOImplementation.getInstance().readAllPaciente());
+	
 	resp.sendRedirect(req.getContextPath() + "/LoginAdministracion.jsp");
 	}
 	
