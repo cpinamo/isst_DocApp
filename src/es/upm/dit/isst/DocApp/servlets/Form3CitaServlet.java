@@ -32,7 +32,7 @@ public class Form3CitaServlet extends HttpServlet{
 		Medico doctor = MedicoDAOImplementation.getInstance().readMedico(medico);
 		
 		String fecha = req.getParameter("datepicker");
-	
+		req.getSession().setAttribute("fecha", fecha);
 		
 		try {
 			Date date = new SimpleDateFormat("dd/mm/yy").parse(fecha);

@@ -51,11 +51,11 @@
 <select name="horas_disponibles">
 	<option value="" disabled selected>Elija una hora</option>
 		<c:forEach items = "${horas_disponibles}" var="horasi">
-			<option value = ${ horasi}> ${horasi}</option> 
+			<option value = ${ horasi}>${horasi}</option> 
 		</c:forEach>
 </select>
 
-<input  type = "hidden" name="fecha" value="${fecha}">
+<input  type = "hidden" name="fecha" value=${fecha}>
 
 <button type = "submit">Pedir cita</button>
 
