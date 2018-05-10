@@ -29,8 +29,8 @@
             </div>
             <div class="collapse navbar-collapse navbar-right" id="myNavbar">
               <ul class="nav navbar-nav">
-                <li class="active"><a href="index.jsp">Inicio</a></li>
-                <li class=""><a href="reservar.jsp">Login</a></li>
+                <li class="active"><a href="Index.jsp">Inicio</a></li>
+                <li class=""><a href="FormLogin.jsp">Login</a></li>
                 <li class=""><a href="about">Sobre nosotros</a></li>
               </ul>
             </div>
@@ -46,8 +46,8 @@
             </div>
             <div class="banner-text text-center">
               <h1 class="white">DocAPP</h1>
-              <p>La página que te permite reservar todas tus citas medicas de una forma sencilla <br>AQUI PONED LO QUE QUERAIS O QUITARLO</p>
-              <a href="reservar.jsp" class="btn btn-appoint">Inicia sesión aquí</a>
+              <p>La página que te permite reservar todas tus citas medicas de una forma sencilla.</p>
+              <a href="FormLogin.jsp" class="btn btn-appoint">Inicia sesión aquí</a>
             </div>
           </div>
         </div>

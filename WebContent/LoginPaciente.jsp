@@ -12,8 +12,6 @@
   <section id="banner" class="banner">
     <div class="bg-color">
 
-
-
   <!-- navbar-->
       <nav class="navbar navbar-default">
         <div class="container">
@@ -28,8 +26,8 @@
             </div>
             <div class="collapse navbar-collapse navbar-right" id="myNavbar">
               <ul class="nav navbar-nav">
-                <li class=""><a href="index.jsp">Inicio</a></li>
-                <li class="active"><a href="reservar.jsp">Login</a></li>
+                <li class=""><a href="Index.jsp">Inicio</a></li>
+                <li class="active"><a href="FormLogin.jsp">Login</a></li>
                 <li class=""><a href="about">Sobre nosotros</a></li>
               </ul>
             </div>
@@ -44,19 +42,23 @@
     <div class="container jumbotron">
 
 <h2>Vista del Paciente</h2>
+<br></br>
 
 <p>DNI: ${paciente.dni }</p>
 <p>Nombre: ${paciente.name }</p>
 <p>Email: ${paciente.email }</p>
+<br></br>
 
 <a href="Form1CitaServlet">Pedir Cita</a>
+<br></br>
 
-<table border = "1">
-<tr>
-<th>Identificación</th>
-<th>Nombre</th>
-<th>Especialidad</th>
-<th>Email</th>
+<table class="table table-hover Table">
+<thead>
+	<tr>
+	<th class="col-lg-2">Identificación</th>
+	<th class="col-lg-3">Nombre</th>
+	<th class="col-lg-3">Especialidad</th>
+	<th class="col-lg-4">Email</th>
 </tr>
 
 <c:forEach items = "${paciente.doctores }" var = "doctoresi">
@@ -69,13 +71,14 @@
 </c:forEach>
 
 </table>
+<br></br>
 
 <form action = "LogoutServlet">
-<button type = "submit">Cerrar sesión</button>
+<button class="col-lg-3" type = "submit">Cerrar sesión</button>
 </form>
 
 <form action = "FormBajaServlet">
-<button type = "submit">Darse de baja</button>
+<button class="col-lg-offset-1 col-lg-3" type = "submit">Darse de baja</button>
 </form>
 </div>
 </section>

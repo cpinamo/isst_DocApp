@@ -14,8 +14,6 @@
   <section id="banner" class="banner">
     <div class="bg-color">
 
-
-
   <!-- navbar-->
       <nav class="navbar navbar-default">
         <div class="container">
@@ -30,8 +28,8 @@
             </div>
             <div class="collapse navbar-collapse navbar-right" id="myNavbar">
               <ul class="nav navbar-nav">
-                <li class=""><a href="index.jsp">Inicio</a></li>
-                <li class="active"><a href="reservar.jsp">Login</a></li>
+                <li class=""><a href="Index.jsp">Inicio</a></li>
+                <li class="active"><a href="FormLogin.jsp">Login</a></li>
                 <li class=""><a href="about">Sobre nosotros</a></li>
               </ul>
             </div>
@@ -47,10 +45,9 @@
 
 <h2>Vista de Administración</h2>
 
-
 <h3>Formulario de creación de pacientes</h3>
 <%@ include file = "FormNuevoPacAdmin.jsp" %>
-
+<br></br>
 <h4>Listado de pacientes</h4>
 <table class="table table-hover Table">
 <thead>
@@ -75,7 +72,7 @@
 </c:forEach>
 </tbody>
 
-</table>
+</table><br></br>
 
 <h3>Formulario de creación de Médicos</h3>
 <%@ include file = "FormNuevoMedAdmin.jsp" %>
@@ -102,14 +99,10 @@
 </c:forEach>
 </tbody>
 
-
 </table>
 
-
-
-
-
 <form action = "LogoutServlet">
+<br></br>
 <button type = "submit">Cerrar sesión</button>
 </form>
     </div>
@@ -121,21 +114,18 @@
   <!--/ banner-->
 	<script>
 	//DataTable
-
 	$(document).ready(function() {
 		var aTable = $('.Table').DataTable({
     		"scrollY": true,
             "ordering": true, 
             "searching": true,
             "aLengthMenu": [[5, 10, 25, -1], [5, 10, 25, "Todas"]],
-            "pageLength": 1,
+            "pageLength": 10,
             "paging": true,
             "orderClasses": false,	
-    });});
-
-	  
-	  
-	  
+    	});
+	});
+		
 		var date = new Date();
 		var currentMonth = date.getMonth();
 		var currentDate = date.getDate();

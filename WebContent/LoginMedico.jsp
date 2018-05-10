@@ -12,8 +12,6 @@
   <section id="banner" class="banner">
     <div class="bg-color">
 
-
-
   <!-- navbar-->
       <nav class="navbar navbar-default">
         <div class="container">
@@ -28,8 +26,8 @@
             </div>
             <div class="collapse navbar-collapse navbar-right" id="myNavbar">
               <ul class="nav navbar-nav">
-                <li class=""><a href="index.jsp">Inicio</a></li>
-                <li class="active"><a href="reservar.jsp">Login</a></li>
+                <li class=""><a href="Index.jsp">Inicio</a></li>
+                <li class="active"><a href="FormLogin.jsp">Login</a></li>
                 <li class=""><a href="about">Sobre nosotros</a></li>
               </ul>
             </div>
@@ -44,19 +42,22 @@
     <div class="container jumbotron">
 
 <h2>Vista del Médico</h2>
+<br></br>
 
 <p>DNI: ${medico.dni }</p>
 <p>Nombre: ${medico.name }</p>
 <p>Email: ${medico.email }</p>
 <p>Especialidad: ${medico.especialidad }</p>
+<br></br>
 
-<table border = "1">
-<tr>
-<th>DNI</th>
-<th>Nombre</th>
-<th>Apellido</th>
-<th>Edad</th>
-<th>Estado</th>
+<table class="table table-hover Table">
+<thead>
+	<tr>
+	<th class="col-lg-2">DNI</th>
+	<th class="col-lg-3">Nombre</th>
+	<th class="col-lg-3">Apellido</th>
+	<th class="col-lg-1">Edad</th>
+	<th class="col-lg-3">Estado</th>
 </tr>
 
 <c:forEach items = "${medico.pacientes }" var = "pacientesi">
@@ -70,9 +71,10 @@
 </c:forEach>
 
 </table>
+<br></br>
 
 <form action = "LogoutServlet">
-<button type = "submit">Cerrar sesión</button>
+<button class="col-lg-3" type = "submit">Cerrar sesión</button>
 </form>
 </div>
 </section>

@@ -16,7 +16,7 @@ public class FormRedirigeInicioServlet extends HttpServlet{
 			throws ServletException, IOException {
 		
 		
-		resp.sendRedirect(req.getContextPath() + "/index.jsp");
+		resp.sendRedirect(req.getContextPath() + "/Index.jsp");
 	}
 
 }
