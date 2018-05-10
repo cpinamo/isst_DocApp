@@ -32,8 +32,7 @@ public class FormDarseDeBajaServlet extends HttpServlet{
 						resp.sendRedirect(req.getContextPath() + "/Form1DarseDeBaja.jsp");
 				}
 				else {
-//					resp.sendRedirect(req.getContextPath() + "/Form3Paciente.jsp");
-					
+					resp.sendRedirect(req.getContextPath() + "/Form4Paciente.jsp");
 				}
 			
 

@@ -41,13 +41,10 @@
   <section id="doctor-team" class="section-padding">
     <div class="container jumbotron">
     
+<title>Darse de baja del sistema</title>
 </head>
 <body>
-<h3>Usted se ha dado de baja correctamente.</h3>
-<form action = "FormRedirigeInicioServlet">
-<br></br>
-<button type = "submit">Volver a inicio</button>
-</form>
+<%@ include file ="FormDarseDeBajaError.jsp" %>
 </div>
 </section>
  </div>
