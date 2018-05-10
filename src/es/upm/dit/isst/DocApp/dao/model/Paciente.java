@@ -2,9 +2,7 @@ package es.upm.dit.isst.DocApp.dao.model;
 
 import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
-
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -12,12 +10,12 @@ import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 
-
 @Entity
-public class Paciente implements Serializable{
-	
+public class Paciente implements Serializable {
+
 	@Id
-	private int dni; //Hemos decidido que el número de la tarjeta sanitaria sea el mismo que el del dni para simplificar
+	private int dni; // Hemos decidido que el número de la tarjeta sanitaria sea el mismo que el del
+						// dni para simplificar
 	private String name;
 	private String apellido;
 	private String password;
@@ -26,28 +24,25 @@ public class Paciente implements Serializable{
 	private int movil;
 	private String domicilio;
 	private String status;
-	
-	@ManyToMany(fetch=FetchType.EAGER, mappedBy="pacientes", cascade= {CascadeType.MERGE, CascadeType.PERSIST})
+
+	@ManyToMany(fetch = FetchType.EAGER, mappedBy = "pacientes", cascade = { CascadeType.MERGE, CascadeType.PERSIST })
 	private List<Medico> doctores;
-	
-	@OneToMany(mappedBy="pacienteCita", fetch = FetchType.EAGER)
+
+	@OneToMany(mappedBy = "pacienteCita", fetch = FetchType.EAGER)
 	private List<Cita> citasPaciente;
-	
-	public Paciente(){
+
+	public Paciente() {
 		this.doctores = new ArrayList<>();
 		this.citasPaciente = new ArrayList<>();
 	}
-
 
 	public List<Cita> getCitasPaciente() {
 		return citasPaciente;
 	}
 
-
 	public void setCitasPaciente(List<Cita> citasPaciente) {
 		this.citasPaciente = citasPaciente;
 	}
-
 
 	public String getName() {
 		return name;
@@ -128,6 +123,4 @@ public class Paciente implements Serializable{
 	public void setDoctores(List<Medico> doctores) {
 		this.doctores = doctores;
 	}
-
-	
 }

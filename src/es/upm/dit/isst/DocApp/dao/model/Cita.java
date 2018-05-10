@@ -1,21 +1,13 @@
 package es.upm.dit.isst.DocApp.dao.model;
 
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.Id;
-import javax.persistence.ManyToMany;
-import javax.persistence.OneToMany;
 import javax.persistence.ManyToOne;
 
 @Entity
-public class Cita implements Serializable{
-	
+public class Cita implements Serializable {
+
 	@Id
 	private String dia;
 	private String hora;
@@ -23,13 +15,12 @@ public class Cita implements Serializable{
 
 	@ManyToOne
 	private Medico medicoCita;
-	
+
 	@ManyToOne
 	private Paciente pacienteCita;
-	
 
 	public Cita() {
-		
+
 	}
 
 	public String getId() {
@@ -77,6 +68,4 @@ public class Cita implements Serializable{
 	public void setPacienteCita(Paciente pacienteCita) {
 		this.pacienteCita = pacienteCita;
 	}
-	
-
 }

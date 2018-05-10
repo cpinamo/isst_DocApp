@@ -1,7 +1,6 @@
 package es.upm.dit.isst.DocApp.servlets;
 
 import java.io.IOException;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -10,17 +9,15 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 @WebServlet("/LogoutServlet")
-public class LogoutServlet extends HttpServlet{
-	
+public class LogoutServlet extends HttpServlet {
+
 	@Override
-	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
-			throws ServletException, IOException {
-		
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
 		HttpSession session = req.getSession(true);
-		if(session != null){
+		if (session != null) {
 			req.getSession().invalidate();
 		}
 		resp.sendRedirect(req.getContextPath() + "/FormLogin.jsp");
 	}
-
 }
