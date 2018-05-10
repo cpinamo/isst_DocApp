@@ -32,6 +32,7 @@ public class FormDarseDeBajaServlet extends HttpServlet{
 
 	
 						PacienteDAOImplementation.getInstance().deletePaciente(p);
+						resp.sendRedirect(req.getContextPath() + "/Form1DarseDeBaja.jsp");
 					}
 				}
 			
@@ -39,7 +40,7 @@ public class FormDarseDeBajaServlet extends HttpServlet{
 		}
 	
 	
-	resp.sendRedirect(req.getContextPath() + "/Form1DarseDeBaja.jsp");
+	resp.sendRedirect(req.getContextPath() + "/FormDarseDeBaja.jsp");
 	
 	}
 	
