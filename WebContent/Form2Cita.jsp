@@ -44,21 +44,31 @@
     <div class="container jumbotron">
 <h2> Elegir médico </h2>
 <form action = "Form3CitaServlet">
-
+<div>
 <select name="doctorCita">
 	<option value="" disabled selected>Elija un doctor</option>
 		<c:forEach items = "${medico_especial}" var="medicoi">
 			<option value = ${ medicoi.email}> ${medicoi.name}</option> 
 		</c:forEach>
 </select>
+</div>
+<br> 
+<div>
+Date: <input type="text" id="datepicker" name="datepicker">
+</div>
+	<script>
+		var date = new Date();
+		var currentMonth = date.getMonth();
+		var currentDate = date.getDate();
+		var currentYear = date.getFullYear();
+		
+		$('#datepicker').datepicker({
+			minDate: new Date(currentYear, currentMonth, currentDate),
+			maxDate: new Date(currentYear, currentMonth+1, currentDate),
+			dateFormat: "dd/mm/yy"
+		}).val();
 
-<select name="diaCita">
-<option value="" disabled selected>Elija un dia</option>
-		<c:forEach items = "${medico_especial}" var="medicoi">
-			<option value = ${ medicoi.email}> ${medicoi.name}</option> 
-		</c:forEach>
-
-</select>
+	</script>
 
 
 <button type = "submit">Elegir doctor y dia</button>

@@ -46,30 +46,18 @@
 
 <form action = "Form4CitaServlet">
 
-<select name="dia">
-	<option value="" disabled selected>Elija un dia</option>
-		<option value = "1">1</option>
-		<option value = "2">2</option>
-		<option value = "3">3</option>
-		<option value = "4">4</option>
-</select>
-<select name="dia">
-	<option value="" disabled selected>Elija un dia</option>
-		<c:forEach items = "${horas_doctor_disponibles}" var="horasi">
-			<option value = ${ horasi}></option> 
+
+
+<select name="horas_disponibles">
+	<option value="" disabled selected>Elija una hora</option>
+		<c:forEach items = "${horas_disponibles}" var="horasi">
+			<option value = ${ horasi}> ${horasi}</option> 
 		</c:forEach>
 </select>
 
-<select name="hora">
-	<option value="" disabled selected>Elija una hora</option>
-		<option value = "9">9</option>
-		<option value = "9:15">9:15</option>
-		<option value = "9:30">9:30</option>
-		<option value = "9:45">9:45</option>
-</select>
+<input  type = "hidden" name="fecha" value="${fecha}">
 
-
-<input type = "submit">Pedir cita</input>
+<button type = "submit">Pedir cita</button>
 
 </form>
 

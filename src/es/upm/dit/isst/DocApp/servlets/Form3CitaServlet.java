@@ -1,9 +1,13 @@
 package es.upm.dit.isst.DocApp.servlets;
 
 import java.io.IOException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -27,34 +31,90 @@ public class Form3CitaServlet extends HttpServlet{
 		String medico = req.getParameter("doctorCita");
 		Medico doctor = MedicoDAOImplementation.getInstance().readMedico(medico);
 		
+		String fecha = req.getParameter("datepicker");
+	
+		
+		try {
+			Date date = new SimpleDateFormat("dd/mm/yy").parse(fecha);
+			
+
+			System.out.println("---");
+			System.out.println("---");
+			System.out.println("---");
+			System.out.println("---");
+			System.out.println("---");
+
+			System.out.println(date);
+			
+			System.out.println("---");
+			System.out.println("---");
+			System.out.println("---");
+			System.out.println("---");
+			System.out.println("---");
+			
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 		List<Cita> citas_list = CitaDAOImplementation.getInstance().readAllCita();
 		req.getSession().setAttribute("citas_list", citas_list);
 		
 		
 		List<Cita> citas_doctor = new ArrayList<>();
 		List<String> horas_doctor = new ArrayList<>();
-		List<String> horas_doctor_disponibles = new ArrayList<>();
-		horas_doctor_disponibles.add("9:00");
+		List<String> horas_disponibles = new ArrayList<>();
+		
 		
 
 		System.out.println("Comprobacion");
 		System.out.println(citas_list.size());
 		if(citas_list.size() != 0) {
-			//for (Cita cit: citas_list) {
-				//CitaDAOImplementation.getInstance().deleteCita(cit);
-//				System.out.println("--------------------");
-//				System.out.println(doctor);
-//				System.out.println(cit.toString());
-//				//System.out.println(med.getName());
-//				System.out.println("--------------------");
-//				if (cit.getMedicoCita().equals(doctor) ) {
-//					System.out.println("ha entrado");
-//					citas_doctor.add(cit);
-//					
-//				}
-			//}
+			for (Cita cit: citas_list) {
+				CitaDAOImplementation.getInstance().deleteCita(cit);
+				System.out.println("--------------------");
+				System.out.println(doctor);
+				System.out.println(cit.toString());
+				System.out.println("--------------------");
+				if (cit.getMedicoCita().equals(doctor) && cit.getDia().equals(fecha) ) {
+					System.out.println("ha entrado");
+					citas_doctor.add(cit);
+					
+				}
+			}
+		} else {
+			horas_disponibles.add("9:00");
+			horas_disponibles.add("10:00");
+			horas_disponibles.add("11:00");
+			horas_disponibles.add("12:00");
+			horas_disponibles.add("13:00");
+			horas_disponibles.add("14:00");
+			horas_disponibles.add("15:00");
+			horas_disponibles.add("16:00");
+			horas_disponibles.add("17:00");
+			
+			System.out.println("--------------------");
+			System.out.println("--------------------");
+			System.out.println("--------------------");
+			System.out.println("--------------------");
+			System.out.println("--------------------");
+			System.out.println("--------------------");
+			
+			System.out.println(horas_disponibles);
+			
+			System.out.println("--------------------");
+			System.out.println("--------------------");
+			System.out.println("--------------------");
+			System.out.println("--------------------");
+			System.out.println("--------------------");
+			System.out.println("--------------------");
+			System.out.println("--------------------");
+			
+		}
 		req.getSession().setAttribute("citas_doctor", citas_doctor);
-		req.getSession().setAttribute("horas_doctor_disponibles", horas_doctor_disponibles);
+		req.getSession().setAttribute("horas_doctor", horas_doctor);
+		req.getSession().setAttribute("horas_disponibles", horas_disponibles);
+		
 
 		
 		
@@ -79,7 +139,7 @@ public class Form3CitaServlet extends HttpServlet{
 		//}
 		
 		resp.sendRedirect(req.getContextPath() + "/Form3Cita.jsp");
-	}
+	//}
 	
 	
 	
