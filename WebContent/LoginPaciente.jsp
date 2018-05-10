@@ -26,8 +26,8 @@
             </div>
             <div class="collapse navbar-collapse navbar-right" id="myNavbar">
               <ul class="nav navbar-nav">
-                <li class=""><a href="Index.jsp">Inicio</a></li>
-                <li class="active"><a href="FormLogin.jsp">Login</a></li>
+                <li class=""><a href="LoginPaciente.jsp">Mi cuenta</a></li>
+                <li class="active"><a href="FormLogout.jsp">Logout</a></li>
                 <li class=""><a href="about">Sobre nosotros</a></li>
               </ul>
             </div>
@@ -72,10 +72,6 @@
 
 </table>
 <br></br>
-
-<form action = "LogoutServlet">
-<button class="col-lg-3" type = "submit">Cerrar sesión</button>
-</form>
 
 <form action = "FormBajaServlet">
 <button class="col-lg-offset-1 col-lg-3" type = "submit">Darse de baja</button>
