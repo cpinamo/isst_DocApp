@@ -1,7 +1,6 @@
 <h2> Darse de baja del sistema </h2>
 
 <form action = "FormDarseDeBajaServlet">
-
 <body>
 <br></br>
 <p>¿Quiere darse de baja definitivamente?</p>

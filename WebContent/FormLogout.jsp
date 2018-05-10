@@ -12,7 +12,6 @@
 	<!--banner-->
 	<section id="banner" class="banner">
 	<div class="bg-color">
-
 		<!-- navbar-->
 		<nav class="navbar navbar-default">
 		<div class="container">

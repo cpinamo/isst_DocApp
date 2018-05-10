@@ -1,4 +1,3 @@
-
 <form action = "Form2CitaServlet">
 
 <select class="col-lg-4" name="especialidades">

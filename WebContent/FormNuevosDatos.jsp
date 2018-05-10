@@ -1,6 +1,5 @@
 <form action = "FormNuevosDatosServlet">
 
-
 <input class="col-lg-4" type = "text" name="email" placeholder = "Email"/>
 <input class="col-lg-offset-1 col-lg-4" type = "number" name="dni" placeholder = "DNI"/>
 <br></br>
