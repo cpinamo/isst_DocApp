@@ -43,7 +43,7 @@
 			<div class="container jumbotron">
 				<body>
 					<h2>Registro paciente</h2>
-					<br></br>
+					<br>
 					<%@ include file="Form1Paciente.jsp"%>
 			</div>
 			</section>

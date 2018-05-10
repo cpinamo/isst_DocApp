@@ -42,11 +42,12 @@
 			<section id="doctor-team" class="section-padding">
 			<div class="container jumbotron">
 				<h2>Vista del Paciente</h2>
-				<br></br>
+				<br>
 				<p>DNI: ${paciente.dni }</p>
 				<p>Nombre: ${paciente.name }</p>
 				<p>Email: ${paciente.email }</p>
-				<br></br> <a href="Form1CitaServlet">Pedir Cita</a> <br></br>
+				<br> 
+				<a href="Form1CitaServlet">Pedir Cita</a> <br>
 				<table class="table table-hover Table">
 					<thead>
 						<tr>
@@ -64,17 +65,16 @@
 							</tr>
 						</c:forEach>
 				</table>
-				<br></br>
+				<br>
 				<form action="FormBajaServlet">
-					<button class="col-lg-offset-1 col-lg-3" type="submit">Darse
-						de baja</button>
+					<button class="col-lg-3" type="submit">Darse de baja</button>
 				</form>
 			</div>
 			</section>
 		</div>
 	</section>
 	<!--footer-->
-	<footer id="footer"> <%@ include file="Templates/Footer.html"%>
+	<footer id="footer"> <%@ include file="Templates/Footer1.html"%>
 	</footer>
 	<!--/ footer-->
 	<%@ include file="Templates/Imports.html"%>

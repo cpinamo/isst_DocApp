@@ -45,7 +45,7 @@
 								type="password" name="password" placeholder="password" />
 							<button class="col-lg-offset-1 col-lg-3" type="submit">Acceder</button>
 						</form>
-						<br></br>
+						<br>
 						<div class="otras-opc">
 							<a class="col-lg-3" href="FormRegistroPacienteServlet">Registrar
 								nuevo paciente</a>

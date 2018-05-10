@@ -27,8 +27,8 @@
 				</div>
 				<div class="collapse navbar-collapse navbar-right" id="myNavbar">
 					<ul class="nav navbar-nav">
-						<li class=""><a href="Index.jsp">Inicio</a></li>
-						<li class="active"><a href="FormLogin.jsp">Login</a></li>
+						<li class=""><a href="LoginPaciente.jsp">Mi cuenta</a></li>
+						<li class="active"><a href="FormLogout.jsp">Logout</a></li>
 						<li class=""><a href="about">Sobre nosotros</a></li>
 					</ul>
 				</div>
@@ -42,16 +42,17 @@
 			<section id="doctor-team" class="section-padding">
 			<div class="container jumbotron">
 				<h2>Elegir médico</h2>
+				<br>
 				<form action="Form3CitaServlet">
 					<div>
-						<select name="doctorCita">
+						<select class="col-lg-3" name="doctorCita">
 							<option value="" disabled selected>Elija un doctor</option>
 							<c:forEach items="${medico_especial}" var="medicoi">
 								<option value=${ medicoi.email}>${medicoi.name}</option>
 							</c:forEach>
 						</select>
 					</div>
-					<br>
+					<br><br>
 					<div>
 						Date: <input type="text" id="datepicker" name="datepicker">
 					</div>
@@ -64,19 +65,20 @@
 								{
 									minDate : new Date(currentYear,
 											currentMonth, currentDate),
-									maxDate : new Date(currentYear,
-											currentMonth + 1, currentDate),
+									maxDate : new Date(currentYear + 1,
+											currentMonth, currentDate),
 									dateFormat : "dd/mm/yy"
 								}).val();
 					</script>
-					<button type="submit">Elegir doctor y dia</button>
+					<br>
+					<button class="col-lg-2" type="submit">Elegir doctor y dia</button>
 				</form>
 			</div>
 			</section>
 		</div>
 	</section>
 	<!--footer-->
-	<footer id="footer"> <%@ include file="Templates/Footer.html"%>
+	<footer id="footer"> <%@ include file="Templates/Footer1.html"%>
 	</footer>
 	<!--/ footer-->
 	<%@ include file="Templates/Imports.html"%>

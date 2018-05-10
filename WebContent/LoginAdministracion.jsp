@@ -44,7 +44,7 @@
 				<h2>Vista de Administración</h2>
 				<h3>Formulario de creación de pacientes</h3>
 				<%@ include file="FormNuevoPacAdmin.jsp"%>
-				<br></br>
+				<br>
 				<h4>Listado de pacientes</h4>
 				<table class="table table-hover Table">
 					<thead>
@@ -68,7 +68,7 @@
 						</c:forEach>
 					</tbody>
 				</table>
-				<br></br>
+				<br>
 				<h3>Formulario de creación de Médicos</h3>
 				<%@ include file="FormNuevoMedAdmin.jsp"%>
 				<h4>Listado de médicos</h4>
@@ -93,7 +93,7 @@
 					</tbody>
 				</table>
 				<form action="LogoutServlet">
-					<br></br>
+					<br>
 					<button type="submit">Cerrar sesión</button>
 				</form>
 			</div>

@@ -27,8 +27,8 @@
 				</div>
 				<div class="collapse navbar-collapse navbar-right" id="myNavbar">
 					<ul class="nav navbar-nav">
-						<li class=""><a href="Index.jsp">Inicio</a></li>
-						<li class="active"><a href="FormLogin.jsp">Login</a></li>
+						<li class=""><a href="LoginPaciente.jsp">Mi cuenta</a></li>
+						<li class="active"><a href="FormLogout.jsp">Logout</a></li>
 						<li class=""><a href="about">Sobre nosotros</a></li>
 					</ul>
 				</div>
@@ -42,12 +42,12 @@
 			<section id="doctor-team" class="section-padding">
 			<div class="container jumbotron">
 				<h2>Vista del Médico</h2>
-				<br></br>
+				<br>
 				<p>DNI: ${medico.dni }</p>
 				<p>Nombre: ${medico.name }</p>
 				<p>Email: ${medico.email }</p>
 				<p>Especialidad: ${medico.especialidad }</p>
-				<br></br>
+				<br>
 				<table class="table table-hover Table">
 					<thead>
 						<tr>
@@ -67,16 +67,12 @@
 							</tr>
 						</c:forEach>
 				</table>
-				<br></br>
-				<form action="LogoutServlet">
-					<button class="col-lg-3" type="submit">Cerrar sesión</button>
-				</form>
 			</div>
 			</section>
 		</div>
 	</section>
 	<!--footer-->
-	<footer id="footer"> <%@ include file="Templates/Footer.html"%>
+	<footer id="footer"> <%@ include file="Templates/Footer1.html"%>
 	</footer>
 	<!--/ footer-->
 	<%@ include file="Templates/Imports.html"%>

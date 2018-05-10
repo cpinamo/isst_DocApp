@@ -27,8 +27,8 @@
 				</div>
 				<div class="collapse navbar-collapse navbar-right" id="myNavbar">
 					<ul class="nav navbar-nav">
-						<li class=""><a href="Index.jsp">Inicio</a></li>
-						<li class="active"><a href="FormLogin.jsp">Login</a></li>
+						<li class=""><a href="LoginPaciente.jsp">Mi cuenta</a></li>
+						<li class="active"><a href="FormLogout.jsp">Logout</a></li>
 						<li class=""><a href="about">Sobre nosotros</a></li>
 					</ul>
 				</div>
@@ -42,22 +42,22 @@
 			<section id="doctor-team" class="section-padding">
 			<div class="container jumbotron">
 				<h2>Elegir hora y día</h2>
-
+				<br>
 				<form action="Form4CitaServlet">
-					<select name="horas_disponibles">
+					<select class="col-lg-3" name="horas_disponibles">
 						<option value="" disabled selected>Elija una hora</option>
 						<c:forEach items="${horas_disponibles}" var="horasi">
 							<option value=${ horasi}>${horasi}</option>
 						</c:forEach>
 					</select> <input type="hidden" name="fecha" value=${fecha}>
-					<button type="submit">Pedir cita</button>
+					<button class="col-lg-offset-2 col-lg-2" type="submit">Pedir cita</button>
 				</form>
 			</div>
 			</section>
 		</div>
 	</section>
 	<!--footer-->
-	<footer id="footer"> <%@ include file="Templates/Footer.html"%>
+	<footer id="footer"> <%@ include file="Templates/Footer1.html"%>
 	</footer>
 	<!--/ footer-->
 	<%@ include file="Templates/Imports.html"%>

@@ -43,7 +43,7 @@
 			<div class="container jumbotron">
 
 				<h2>Recuperar contraseña</h2>
-				<br></br>
+				<br>
 				<%@ include file="FormNuevosDatos.jsp"%>
 			</div>
 			</section>

@@ -27,8 +27,8 @@
 				</div>
 				<div class="collapse navbar-collapse navbar-right" id="myNavbar">
 					<ul class="nav navbar-nav">
-						<li class=""><a href="Index.jsp">Inicio</a></li>
-						<li class="active"><a href="FormLogin.jsp">Login</a></li>
+						<li class=""><a href="LoginPaciente.jsp">Mi cuenta</a></li>
+						<li class="active"><a href="FormLogout.jsp">Logout</a></li>
 						<li class=""><a href="about">Sobre nosotros</a></li>
 					</ul>
 				</div>
@@ -41,7 +41,6 @@
 			<!--doctor team-->
 			<section id="doctor-team" class="section-padding">
 			<div class="container jumbotron">
-
 				<title>Darse de baja del sistema</title>
 				</head>
 				<body>
@@ -51,7 +50,7 @@
 		</div>
 	</section>
 	<!--footer-->
-	<footer id="footer"> <%@ include file="Templates/Footer.html"%>
+	<footer id="footer"> <%@ include file="Templates/Footer1.html"%>
 	</footer>
 	<!--/ footer-->
 	<%@ include file="Templates/Imports.html"%>

@@ -45,7 +45,7 @@
 				<body>
 					<h3>Usted se ha dado de baja correctamente.</h3>
 					<form action="FormRedirigeInicioServlet">
-						<br></br>
+						<br>
 						<button type="submit">Volver a inicio</button>
 					</form>
 			</div>

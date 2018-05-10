@@ -27,8 +27,6 @@
 				</div>
 				<div class="collapse navbar-collapse navbar-right" id="myNavbar">
 					<ul class="nav navbar-nav">
-						<li class=""><a href="LoginPaciente.jsp">Mi cuenta</a></li>
-						<li class="active"><a href="FormLogin.jsp">Logout</a></li>
 						<li class=""><a href="about">Sobre nosotros</a></li>
 					</ul>
 				</div>
@@ -45,7 +43,7 @@
 				</head>
 				<body>
 					<h3>Ha cerrado sesión correctamente.</h3>
-					<br></br>
+					<br>
 					<form action="LoginServlet">
 						<button class="col-lg-3" type="submit">Volver a inicio</button>
 					</form>
@@ -56,7 +54,7 @@
 
 
 	<!--footer-->
-	<footer id="footer"> <%@ include file="Templates/Footer.html"%>
+	<footer id="footer"> <%@ include file="Templates/Footer2.html"%>
 	</footer>
 	<!--/ footer-->
 
