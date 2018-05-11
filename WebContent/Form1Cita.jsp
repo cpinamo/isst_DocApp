@@ -1,5 +1,85 @@
 <form action = "Form2CitaServlet">
-
+<div class="col-md-3 col-sm-3 col-xs-6 container">
+			<div class="container">
+			<input name="especialidades" type="image" src="img/thumb.png" value="Urologia" alt="" />
+			</div>
+            <div class="caption">     
+              <h3>Urología</h3>
+            </div>
+         </div>
+         <div class="col-md-3 col-sm-3 col-xs-6 container">
+			<div class="container">
+			<input name="especialidades" type="image" src="img/thumb.png" value="Urologia" alt="" />
+			</div>
+            <div class="caption">     
+              <h3>Urología</h3>
+            </div>
+         </div>
+         <div class="col-md-3 col-sm-3 col-xs-6 container">
+			<div class="container">
+			<input name="especialidades" type="image" src="img/thumb.png" value="Urologia" alt="" />
+			</div>
+            <div class="caption">     
+              <h3>Urología</h3>
+            </div>
+         </div>
+         <div class="col-md-3 col-sm-3 col-xs-6 container">
+			<div class="container">
+			<input name="especialidades" type="image" src="img/thumb.png" value="Urologia" alt="" />
+			</div>
+            <div class="caption">     
+              <h3>Urología</h3>
+            </div>
+         </div>
+         <div class="col-md-3 col-sm-3 col-xs-6 container">
+			<div class="container">
+			<input name="especialidades" type="image" src="img/thumb.png" value="Urologia" alt="" />
+			</div>
+            <div class="caption">     
+              <h3>Urología</h3>
+            </div>
+         </div>
+         <div class="col-md-3 col-sm-3 col-xs-6 container">
+			<div class="container">
+			<input name="especialidades" type="image" src="img/thumb.png" value="Urologia" alt="" />
+			</div>
+            <div class="caption">     
+              <h3>Urología</h3>
+            </div>
+         </div>
+         <div class="col-md-3 col-sm-3 col-xs-6 container">
+			<div class="container">
+			<input name="especialidades" type="image" src="img/thumb.png" value="Urologia" alt="" />
+			</div>
+            <div class="caption">     
+              <h3>Urología</h3>
+            </div>
+         </div>
+         <div class="col-md-3 col-sm-3 col-xs-6 container">
+			<div class="container">
+			<input name="especialidades" type="image" src="img/thumb.png" value="Urologia" alt="" />
+			</div>
+            <div class="caption">     
+              <h3>Urología</h3>
+            </div>
+         </div>
+         <div class="col-md-3 col-sm-3 col-xs-6 container">
+			<div class="container">
+			<input name="especialidades" type="image" src="img/thumb.png" value="Urologia" alt="" />
+			</div>
+            <div class="caption">     
+              <h3>Urología</h3>
+            </div>
+         </div>
+         <div class="col-md-3 col-sm-3 col-xs-6 container">
+			<div class="container">
+			<input name="especialidades" type="image" src="img/thumb.png" value="Urologia" alt="" />
+			</div>
+            <div class="caption">     
+              <h3>Urología</h3>
+            </div>
+         </div>
+<!-- 
 <select class="col-lg-4" name="especialidades">
 	<option  value="" disabled selected>Elija una especialidad</option>
 		<option value = "Alergologia">Alergología</option>
@@ -16,6 +96,6 @@
 		<option value = "Urologia">Urología</option>
 </select>
 
-<button class="col-lg-offset-1 col-lg-4"type = "submit">Elegir especialidad</button>
+<button class="col-lg-offset-1 col-lg-4"type = "submit">Elegir especialidad</button> -->
 
 </form>
