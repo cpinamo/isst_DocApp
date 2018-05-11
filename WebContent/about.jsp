@@ -35,19 +35,22 @@
 			</div>
 		</div>
 		</nav>
-		<!-- navbar-->
-		<div class="container">
+	<div class="container">
 			<div class="row">
-				<div class="banner-info">
+				<div class="banner-2">
 					<div class="banner-logo text-center">
 						<img src="img/logo.png" class="img-responsive">
 					</div>
 					<div class="banner-text text-center">
-						<h1 class="white">DocAPP</h1>
-						<p>La página que te permite reservar todas tus citas medicas
-							de una forma sencilla.</p>
-						<a href="FormLogin.jsp" class="btn btn-appoint">Inicia sesión
-							aquí</a>
+						<h1 class="white">Sobre nosotros</h1>
+						<p>DocApp es una aplicación de uso sencillo para la reserva de citas médicas.</p>
+						<p>A través de esta aplicación podrá escoger fecha y hora para pasar consulta, y 
+						podrá seleccionar a su médico mediante un listado por especialidad.</p>
+						<p> </p>
+						<p>Si desea contactar con nosotros, 
+						podrá hacerlo a través de los siguientes medios:</p>
+						<p>Teléfono</p>
+						<p>Correo Electrónico</p>
 					</div>
 				</div>
 			</div>
