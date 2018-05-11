@@ -39,7 +39,7 @@
 			<div class="row">
 				<div class="banner-2">
 					<div class="banner-logo text-center">
-						<img src="img/logo.png" class="img-responsive">
+						<img src="img/logo.png" class="img-responsive" height="60" width="60">
 					</div>
 					<div class="banner-text text-center">
 						<h1 class="white">Sobre nosotros</h1>
@@ -49,8 +49,8 @@
 						<p> </p>
 						<p>Si desea contactar con nosotros, 
 						podrá hacerlo a través de los siguientes medios:</p>
-						<p>Teléfono</p>
-						<p>Correo Electrónico</p>
+						<p>Teléfono +34 111111111</p>
+						<p>Correo Electrónico xxxxx@xxx.com</p>
 					</div>
 				</div>
 			</div>

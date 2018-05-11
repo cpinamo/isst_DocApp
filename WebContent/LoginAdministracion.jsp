@@ -29,7 +29,7 @@
 					<ul class="nav navbar-nav">
 						<li class=""><a href="Index.jsp">Inicio</a></li>
 						<li class="active"><a href="FormLogin.jsp">Login</a></li>
-						<li class=""><a href="about">Sobre nosotros</a></li>
+						<li class=""><a href="about.jsp">Sobre nosotros</a></li>
 					</ul>
 				</div>
 			</div>
