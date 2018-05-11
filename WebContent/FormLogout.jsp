@@ -25,11 +25,6 @@
 					<a class="navbar-brand" href="#"><img src="img/logo.png"
 						class="img-responsive" style="width: 140px; margin-top: -16px;"></a>
 				</div>
-				<div class="collapse navbar-collapse navbar-right" id="myNavbar">
-					<ul class="nav navbar-nav">
-						<li class=""><a href="about">Sobre nosotros</a></li>
-					</ul>
-				</div>
 			</div>
 		</div>
 		</nav>
