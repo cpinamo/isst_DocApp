@@ -2,6 +2,8 @@ package es.upm.dit.isst.DocApp.dao.model;
 
 import java.io.Serializable;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
@@ -9,9 +11,11 @@ import javax.persistence.ManyToOne;
 public class Cita implements Serializable {
 
 	@Id
+	@GeneratedValue(strategy=GenerationType.SEQUENCE)
+	private long id;
 	private String dia;
 	private String hora;
-	private String id;
+	
 
 	@ManyToOne
 	private Medico medicoCita;
@@ -20,16 +24,14 @@ public class Cita implements Serializable {
 	private Paciente pacienteCita;
 
 	public Cita() {
-
+	
 	}
 
-	public String getId() {
+	public long getId() {
 		return id;
 	}
 
-	public void setId(String id) {
-		this.id = id;
-	}
+	
 
 	public String getDia() {
 		return dia;
@@ -68,4 +70,5 @@ public class Cita implements Serializable {
 	public void setPacienteCita(Paciente pacienteCita) {
 		this.pacienteCita = pacienteCita;
 	}
+	
 }

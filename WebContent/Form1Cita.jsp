@@ -1,11 +1,9 @@
 <form action = "Form2CitaServlet">
-
-     <div class="col-lg-4" align="center">
-		 
-		<input name="especialidades" type="image" src="img/alergologia.jpg" value="Alergologia" alt="" height="120px"/>
-           
+	<input type="hidden" name="paciente" value="${paciente}">
+     <div class="col-lg-4" align="center"> 
+		<input name="especialidades" type="image" src="img/alergologia.jpg" value="Alergologia" alt="" height="120px"/>    
                  
-              <h3>Alergología</h3>
+              <h3>${paciente}-Alergología</h3>
               
             
     </div>
@@ -24,8 +22,6 @@
         <h3>Dermatología</h3>
         <br>           
     </div>
-    
-    <br><br><br><br><br><br><br>
     
     <div class="col-lg-4 col-md-3 col-sm-3 col-xs-6 container" align="center">
   
@@ -106,24 +102,5 @@
             
     </div>
 
-    
-<!-- 
-<select class="col-lg-4" name="especialidades">
-	<option  value="" disabled selected>Elija una especialidad</option>
-		<option value = "Alergologia">Alergología</option>
-		<option value = "Cardiologia">Cardiología</option>
-		<option value = "Dermatologia">Dermatología</option>
-		<option value = "Fisioterapia">Fisioterapia</option>
-		<option value = "Ginecologia">Ginecología</option>
-		<option value = "Hematologia">Hematología</option>
-		<option value = "Neumologia">Neumología</option>
-		<option value = "Neurologia">Neurología</option>
-		<option value = "Oftalmologia">Oftalmología</option>
-		<option value = "Psicologia">Psicología</option>
-		<option value = "Traumatologia">Traumatología</option>
-		<option value = "Urologia">Urología</option>
-</select>
-
-<button class="col-lg-offset-1 col-lg-4"type = "submit">Elegir especialidad</button> -->
 
 </form>

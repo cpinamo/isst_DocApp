@@ -67,13 +67,13 @@ public class PacienteDAOImplementation implements PacienteDAO {
 	}
 
 	@Override
-	public Paciente readPaciente(String email) {
+	public Paciente readPaciente(int dni) {
 		Paciente paciente = null;
 		Session session = SessionFactoryService.get().openSession();
 
 		try {
 			session.beginTransaction();
-			paciente = session.get(Paciente.class, email);
+			paciente = session.get(Paciente.class, dni);
 			session.getTransaction().commit();
 		} catch (Exception e) {
 

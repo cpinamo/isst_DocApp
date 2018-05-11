@@ -35,16 +35,20 @@ public class CitaDAOImplementation implements CitaDAO {
 	}
 
 	public void createCita(Cita cita) {
+		
 		Session session = SessionFactoryService.get().openSession();
 		try {
 			session.beginTransaction();
 			session.save(cita);
+			
 			session.getTransaction().commit();
 		} catch (Exception e) {
 
 		} finally {
 			session.close();
 		}
+		System.out.println("citaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
+		System.out.println(cita.toString());
 	}
 
 	public Cita readCita(String id) {

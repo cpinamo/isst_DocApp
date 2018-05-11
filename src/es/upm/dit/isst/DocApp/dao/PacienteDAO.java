@@ -11,7 +11,7 @@ public interface PacienteDAO {
 
 	public void createPaciente(Paciente paciente);
 
-	public Paciente readPaciente(String email);
+	public Paciente readPaciente(int dni);
 
 	public void updatePaciente(Paciente paciente);
 

@@ -14,12 +14,11 @@ import javax.persistence.OneToMany;
 public class Paciente implements Serializable {
 
 	@Id
-	private int dni; // Hemos decidido que el número de la tarjeta sanitaria sea el mismo que el del
-						// dni para simplificar
+	private int dni;
+	private String email;
 	private String name;
 	private String apellido;
 	private String password;
-	private String email;
 	private int edad;
 	private int movil;
 	private String domicilio;
@@ -123,4 +122,12 @@ public class Paciente implements Serializable {
 	public void setDoctores(List<Medico> doctores) {
 		this.doctores = doctores;
 	}
+
+	@Override
+	public String toString() {
+		return "Paciente [dni=" + dni + ", email=" + email + ", name=" + name + ", apellido=" + apellido + ", password="
+				+ password + ", edad=" + edad + ", movil=" + movil + ", domicilio=" + domicilio + ", status=" + status
+				+ ", doctores=" + doctores + ", citasPaciente=" + citasPaciente + "]";
+	}
+	
 }

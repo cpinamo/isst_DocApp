@@ -46,7 +46,10 @@
 				<p>Nombre: ${paciente.name }</p>
 				<p>Email: ${paciente.email }</p>
 				<br> 
-				<a href="Form1CitaServlet">Pedir Cita</a> <br>
+				<form action = "Form1CitaServlet">
+				<input type="hidden" name="paciente" value=${paciente.dni}>
+				<button class="col-lg-2" type="submit">Pedir cita</button> <br>
+				</form>
 				<table class="table table-hover Table">
 					<thead>
 						<tr>

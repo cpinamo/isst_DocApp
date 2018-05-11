@@ -17,6 +17,8 @@ public class Form1CitaServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		List<Medico> medicos = MedicoDAOImplementation.getInstance().readAllMedico();
 		req.getSession().setAttribute("medico_list", medicos);
+		String paciente = req.getParameter("paciente");
+		req.getSession().setAttribute("paciente", paciente);
 		resp.sendRedirect(req.getContextPath() + "/Form2Paciente.jsp");
 	}
 }

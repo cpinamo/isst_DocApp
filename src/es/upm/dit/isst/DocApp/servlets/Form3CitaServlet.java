@@ -23,9 +23,13 @@ public class Form3CitaServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		String medico = req.getParameter("doctorCita");
 		Medico doctor = MedicoDAOImplementation.getInstance().readMedico(medico);
+		req.getSession().setAttribute("medico", medico);
 
 		String fecha = req.getParameter("datepicker");
 		req.getSession().setAttribute("fecha", fecha);
+		
+		String paciente = req.getParameter("paciente");
+		req.getSession().setAttribute("paciente", paciente);
 
 		try {
 			Date date = new SimpleDateFormat("dd/mm/yy").parse(fecha);

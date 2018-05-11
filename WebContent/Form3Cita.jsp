@@ -40,18 +40,31 @@
 			<!--doctor team-->
 			<section id="doctor-team" class="section-padding">
 			<div class="container jumbotron">
+			
+			
+			
 				<h2>Elegir hora y día</h2>
 				<br>
 				<form action="Form4CitaServlet">
-					<select class="col-lg-3" name="horas_disponibles">
+				
+					<select class="col-lg-3" name="hora">
 						<option value="" disabled selected>Elija una hora</option>
 						<c:forEach items="${horas_disponibles}" var="horasi">
-							<option value=${ horasi}>${horasi}</option>
+							<option value=${ horasi}>${paciente}-${horasi}</option>
 						</c:forEach>
-					</select> <input type="hidden" name="fecha" value=${fecha}>
+					</select> 
+					<input type="hidden" name="fecha" value=${fecha}>
+					<input type="hidden" name="medico" value="${medico}">
+					<input type="hidden" name="paciente" value="${paciente}">
+					
+					
 					<button class="col-lg-offset-2 col-lg-2" type="submit">Pedir cita</button>
 				</form>
 			</div>
+			
+			
+			
+			
 			</section>
 		</div>
 	</section>

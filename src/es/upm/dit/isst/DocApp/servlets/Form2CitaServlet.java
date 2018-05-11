@@ -22,7 +22,8 @@ public class Form2CitaServlet extends HttpServlet {
 		List<Medico> medico_list = MedicoDAOImplementation.getInstance().readAllMedico();
 		req.getSession().setAttribute("medico_list", medico_list);
 		List<Medico> medico_especial = new ArrayList<>();
-
+		String paciente = req.getParameter("paciente");
+		req.getSession().setAttribute("paciente", paciente);
 		for (Medico med : medico_list) {
 			// System.out.println("Comprobacion");
 			// System.out.println(med.getEspecialidad());

@@ -47,10 +47,11 @@
 						<select class="col-lg-3" name="doctorCita">
 							<option value="" disabled selected>Elija un doctor</option>
 							<c:forEach items="${medico_especial}" var="medicoi">
-								<option value=${ medicoi.email}>${medicoi.name}</option>
+								<option value=${ medicoi.email}>${paciente}-${medicoi.name}</option>
 							</c:forEach>
 						</select>
 					</div>
+					<input type="hidden" name="paciente" value="${paciente}">
 					<br><br>
 					<div>
 						Date: <input type="text" id="datepicker" name="datepicker">
