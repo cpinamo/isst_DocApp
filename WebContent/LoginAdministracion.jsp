@@ -53,7 +53,7 @@
 							<th class="col-lg-3">Nombre</th>
 							<th class="col-lg-3">Apellido</th>
 							<th class="col-lg-1">Edad</th>
-							<th class="col-lg-3">Estado</th>
+							<th class="col-lg-3">Email</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -63,7 +63,7 @@
 								<td>${pacientei.name}</td>
 								<td>${pacientei.apellido}</td>
 								<td>${pacientei.edad}</td>
-								<td>${pacientei.status}</td>
+								<td>${pacientei.email}</td>
 							</tr>
 						</c:forEach>
 					</tbody>

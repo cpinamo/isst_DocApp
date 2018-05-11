@@ -40,8 +40,8 @@
 			<!--doctor team-->
 			<section id="doctor-team" class="section-padding">
 			<div class="container jumbotron">
-				<h2>Petición de cita</h2>
-				<br>
+				<h2>Elija una especialidad</h2>
+				<br><br>
 				<%@ include file="Form1Cita.jsp"%>
 			</div>
 			</section>
