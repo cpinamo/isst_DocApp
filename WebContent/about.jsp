@@ -49,10 +49,27 @@
 						<p> </p>
 						<p>Si desea contactar con nosotros, 
 						podrá hacerlo a través de los siguientes medios:</p>
-						<p>Teléfono +34 111111111</p>
-						<p>Correo Electrónico xxxxx@xxx.com</p>
+						<p><Strong>Teléfono:</Strong> +34 111111111</p>
+						<p><Strong>Correo Electrónico:</Strong> root@docapp.com</p>					
 					</div>
 				</div>
+				<br>
+				<div align="center">
+				<h4 class="white">Ubícanos en el mapa:</h4>
+				<div class="banner-text text-center">
+				<p>Nuestra dirección es Avenida Complutense, nº 30 (28040 Madrid).</p>
+				<p>En transporte público se puede llegar por metro (Línea Circular,<br>
+				 estación Ciudad Universitaria) o autobús (líneas EMT 82, F, G y U).</p><br>	
+				</div>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3786.7471745315297!2d
+				-3.7259889242342874!3d40.45140853882517!2m3!1f0!2f0!3f0!3m2!
+				1i1024!2i768!4f13.1!3m3!1m2!1s0xd422834b7ba343b%3A0x9f310b10
+				6880a45f!2sETSIT%3A+Biblioteca!5e0!3m2!1ses!2ses!4v1526121858476" 
+				width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+							
+				</div>
+				
+							
 			</div>
 		</div>
 	</div>
