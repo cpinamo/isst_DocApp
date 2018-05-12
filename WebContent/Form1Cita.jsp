@@ -3,14 +3,14 @@
      <div class="col-lg-4" align="center"> 
 		<input name="especialidades" type="image" src="img/alergologia.jpg" value="Alergologia" alt="" height="120px"/>    
                  
-              <h3>${paciente}-Alergología</h3>
+              <h3>Alergología</h3>
               
             
     </div>
     
      <div class="col-lg-4" align="center">
      
-		<input name="especialidades" type="image" src="img/cardiologia.jpg" value="Urologia" alt="" height="120px"/>
+		<input name="especialidades" type="image" src="img/cardiologia.jpg" value="Cardiologia" alt="" height="120px"/>
 	
                  
               <h3>Cardiología</h3>

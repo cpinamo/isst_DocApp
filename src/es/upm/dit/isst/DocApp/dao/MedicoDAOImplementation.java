@@ -38,6 +38,7 @@ public class MedicoDAOImplementation implements MedicoDAO {
 		return medico;
 	}
 
+	@Override
 	public List<Medico> readAllMedico() {
 		Session session = SessionFactoryService.get().openSession();
 		List<Medico> medicos = new ArrayList<>();

@@ -4,7 +4,6 @@ import java.util.List;
 import es.upm.dit.isst.DocApp.dao.model.Cita;
 
 public interface CitaDAO {
-	public interface MedicoDAO {
 
 		public List<Cita> readAllCita();
 
@@ -15,5 +14,5 @@ public interface CitaDAO {
 		public void updateCita(Cita cita);
 
 		public void deleteCita(Cita cita);
-	}
+
 }

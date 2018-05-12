@@ -50,7 +50,7 @@
 					<select class="col-lg-3" name="hora">
 						<option value="" disabled selected>Elija una hora</option>
 						<c:forEach items="${horas_disponibles}" var="horasi">
-							<option value=${ horasi}>${paciente}-${horasi}</option>
+							<option value=${ horasi}>${horasi}</option>
 						</c:forEach>
 					</select> 
 					<input type="hidden" name="fecha" value=${fecha}>

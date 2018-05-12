@@ -38,6 +38,7 @@ public class PacienteDAOImplementation implements PacienteDAO {
 		return paciente;
 	}
 
+	@Override
 	public List<Paciente> readAllPaciente() {
 		Session session = SessionFactoryService.get().openSession();
 		List<Paciente> pacientes = new ArrayList<>();

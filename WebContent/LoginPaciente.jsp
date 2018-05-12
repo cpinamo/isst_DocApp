@@ -42,7 +42,7 @@
 			<div class="container jumbotron">
 				<h2>Vista del Paciente</h2>
 				<br>
-				<p>DNI: ${paciente.dni }</p>
+			    <p>DNI: ${paciente.dni }</p>
 				<p>Nombre: ${paciente.name }</p>
 				<p>Email: ${paciente.email }</p>
 				<br> 

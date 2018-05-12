@@ -13,6 +13,7 @@ public class Cita implements Serializable {
 	@Id
 	@GeneratedValue(strategy=GenerationType.SEQUENCE)
 	private long id;
+	
 	private String dia;
 	private String hora;
 	

@@ -11,7 +11,6 @@ public class CitaDAOImplementation implements CitaDAO {
 
 	private CitaDAOImplementation() {
 	};
-
 	public static CitaDAOImplementation getInstance() {
 		if (null == instance) {
 			instance = new CitaDAOImplementation();
@@ -20,6 +19,7 @@ public class CitaDAOImplementation implements CitaDAO {
 		return instance;
 	}
 
+	@Override
 	public List<Cita> readAllCita() {
 		Session session = SessionFactoryService.get().openSession();
 		List<Cita> citas = new ArrayList<>();
@@ -34,6 +34,7 @@ public class CitaDAOImplementation implements CitaDAO {
 		return citas;
 	}
 
+	@Override
 	public void createCita(Cita cita) {
 		
 		Session session = SessionFactoryService.get().openSession();
@@ -47,10 +48,9 @@ public class CitaDAOImplementation implements CitaDAO {
 		} finally {
 			session.close();
 		}
-		System.out.println("citaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
-		System.out.println(cita.toString());
 	}
 
+	@Override
 	public Cita readCita(String id) {
 		Cita cita = null;
 		Session session = SessionFactoryService.get().openSession();
@@ -67,6 +67,7 @@ public class CitaDAOImplementation implements CitaDAO {
 		return cita;
 	}
 
+	@Override
 	public void updateCita(Cita cita) {
 		Session session = SessionFactoryService.get().openSession();
 		try {
@@ -79,6 +80,7 @@ public class CitaDAOImplementation implements CitaDAO {
 		}
 	}
 
+	@Override
 	public void deleteCita(Cita cita) {
 		Session session = SessionFactoryService.get().openSession();
 		try {

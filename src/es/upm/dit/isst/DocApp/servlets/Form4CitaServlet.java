@@ -29,74 +29,17 @@ public class Form4CitaServlet extends HttpServlet {
 		Paciente pacientePersona = PacienteDAOImplementation.getInstance().readPaciente(dni);
 		
 
-	
-		
-		
-		
-		
-		System.out.println("tostriiiiiiiiiiing");
-		System.out.println("---");
-		System.out.println("---");
-		System.out.println("---");
-		System.out.println("---");
-
-		System.out.println("---");
-		System.out.println("---");
-		System.out.println("---");
-		System.out.println("---");
-		System.out.println("---");
-		
-		System.out.println("medicooooooooooooooooooooooooo");
-		System.out.println("---");
-		System.out.println("---");
-		System.out.println("---");
-		System.out.println("---");
-
-		System.out.println(medico);
-
-		System.out.println("---");
-		System.out.println("---");
-		System.out.println("---");
-		System.out.println("---");
-		System.out.println("---");
-		
-		System.out.println("horaaaaaaaaaaaaaaaaaaaaaaaaaaa");
-		System.out.println("---");
-		System.out.println("---");
-		System.out.println("---");
-		System.out.println("---");
-
-		System.out.println(hora);
-
-		System.out.println("---");
-		System.out.println("---");
-		System.out.println("---");
-		System.out.println("---");
-		System.out.println("---");
-		
-		System.out.println("pacienteeeeeeeeeeeeeeeeeeeeeeeee");
-		System.out.println("---");
-		System.out.println("---");
-		System.out.println("---");
-		System.out.println("---");
-
-		System.out.println(paciente);
-
-		System.out.println("---");
-		System.out.println("---");
-		System.out.println("---");
-		System.out.println("---");
-		System.out.println("---");
-
 		Cita cita = new Cita();
 		cita.setDia(fecha);
 		cita.setHora(hora);
 		cita.setMedicoCita(doctor);
 		cita.setPacienteCita(pacientePersona);
-//		cita.setId(1);
+		
 
 
 		CitaDAOImplementation.getInstance().createCita(cita);
+		
+		req.getSession().setAttribute("cita_list", CitaDAOImplementation.getInstance().readAllCita());
 		resp.sendRedirect(req.getContextPath() + "/FormLogin.jsp");
 	}
 }
