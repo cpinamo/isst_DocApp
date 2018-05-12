@@ -27,7 +27,7 @@
 				</div>
 				<div class="collapse navbar-collapse navbar-right" id="myNavbar">
 					<ul class="nav navbar-nav">
-						<li class=""><a href="LoginPaciente.jsp">Mi cuenta</a></li>
+						<li class=""><a href="LoginPaciente.jsp">Mi cuenta</a></li> //direccionar a un servlet para pasar el dato de paciente
 						<li class="active"><a href="FormLogout.jsp">Logout</a></li>
 					</ul>
 				</div>
