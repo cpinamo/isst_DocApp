@@ -73,9 +73,7 @@ public class Form3CitaServlet extends HttpServlet {
 		
 		if (horas_doctor.size() != 0) {
 			for (String hor: horas_doctor) {
-				if(horas_doctor.contains(hor)) {
 					horas_disponibles.remove(hor);
-				}
 			}
 		}
 		

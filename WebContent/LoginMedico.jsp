@@ -50,26 +50,69 @@
 				<table class="table table-hover Table">
 					<thead>
 						<tr>
-							<th class="col-lg-2">DNI</th>
-							<th class="col-lg-3">Nombre</th>
-							<th class="col-lg-3">Apellido</th>
-							<th class="col-lg-1">Edad</th>
-							<th class="col-lg-3">Estado</th>
+							<th class="col-lg-3">DÍA</th>
+							<th class="col-lg-1">HORA</th>
+							<th class="col-lg-3">PACIENTE</th>
+							<th class="col-lg-2">ID CITA</th> 
 						</tr>
-						<c:forEach items="${medico.pacientes }" var="pacientesi">
+					</thead>
+					<tbody>
+						<c:forEach items="${medico.citasMedico }" var="citasi">
 							<tr>
-								<td>${pacientei.dni}</td>
-								<td>${pacientei.name}</td>
-								<td>${pacientei.apellido}</td>
-								<td>${pacientei.edad}</td>
-								<td>${pacientei.status}</td>
+								<td>${citasi.dia}</td>
+								<td>${citasi.hora}</td>
+								<td>${citasi.pacienteCita.getName()}</td>
+								<td>${citasi.id}</td>
 							</tr>
 						</c:forEach>
+					</tbody>
 				</table>
 			</div>
 			</section>
 		</div>
 	</section>
+	<script>
+		//DataTable
+		$(document).ready(function() {
+			var aTable = $('.Table').DataTable({
+				"scrollY" : true,
+				"ordering" : true,
+				"searching" : true,
+				"aLengthMenu" : [ [ 5, 10, 25, -1 ], [ 5, 10, 25, "Todas" ] ],
+				"pageLength" : 10,
+				"paging" : true,
+				"orderClasses" : false,
+				 "language": {
+			            "lengthMenu": "Mostrando _MENU_ entradas por página",
+			            "zeroRecords": "No se ha encontrado nada - sorry",
+			            "info": "Mostrando _PAGE_ de _PAGES_",
+			            "infoEmpty": "No existe el escenario",
+			            "sProcessing":     "Procesando...",
+			            "sLengthMenu":     "Mostrar _MENU_ registros",
+			            "sZeroRecords":    "No se encontraron resultados",
+			            "sEmptyTable":     "Ningún dato disponible en esta tabla",
+			            "sInfo":           "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
+			            "sInfoEmpty":      "Mostrando registros del 0 al 0 de un total de 0 registros",
+			            "sInfoFiltered":   "(filtrado de un total de _MAX_ registros)",
+			            "sInfoPostFix":    "",
+			            "sSearch":         "Buscar:",
+			            "sUrl":            "",
+			            "sInfoThousands":  ",",
+			            "sLoadingRecords": "Cargando...",
+			            "oPaginate": {
+			                "sFirst":    "Primero",
+			                "sLast":     "Último",
+			                "sNext":     "Siguiente",
+			                "sPrevious": "Anterior"
+			            },
+			            "oAria": {
+			                "sSortAscending":  ": Activar para ordenar la columna de manera ascendente",
+			                "sSortDescending": ": Activar para ordenar la columna de manera descendente"
+			            }
+			        }
+			});
+		});
+		</script>
 	<!--footer-->
 	<footer id="footer"> <%@ include file="Templates/Footer1.html"%>
 	</footer>

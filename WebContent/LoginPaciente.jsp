@@ -48,24 +48,31 @@
 				<br> 
 				<form action = "Form1CitaServlet">
 				<input type="hidden" name="paciente" value=${paciente.dni}>
-				<button class="col-lg-2" type="submit">Pedir cita</button> <br>
+				<button class="col-lg-2" type="submit">Pedir cita</button> <br><br><br>
 				</form>
 				<table class="table table-hover Table">
 					<thead>
 						<tr>
-							<th class="col-lg-2">Identificación</th>
-							<th class="col-lg-3">Nombre</th>
-							<th class="col-lg-3">Especialidad</th>
-							<th class="col-lg-4">Email</th>
+							
+							<th class="col-lg-3">DÍA</th>
+							<th class="col-lg-1">HORA</th>
+							<th class="col-lg-3">MÉDICO</th>
+							<th class="col-lg-3">ESPECIALIDAD</th>
+							<th class="col-lg-2">ID CITA</th>
 						</tr>
-						<c:forEach items="${paciente.doctores }" var="doctoresi">
+					</thead>
+					<tbody>
+						<c:forEach items="${paciente.citasPaciente }" var="citasi">
 							<tr>
-								<td>${doctoresi.dni}</td>
-								<td>${doctoresi.name}</td>
-								<td>${doctoresi.especialidad}</td>
-								<td>${doctoresi.email}</td>
+							
+								<td>${citasi.dia}</td>
+								<td>${citasi.hora}</td>
+								<td>${citasi.medicoCita.getName()}</td>
+								<td>${citasi.medicoCita.getEspecialidad()}</td>
+								<td>${citasi.id}</td>
 							</tr>
 						</c:forEach>
+					</tbody>
 				</table>
 				<br>
 				<form action="FormBajaServlet">
@@ -75,6 +82,48 @@
 			</section>
 		</div>
 	</section>
+	<script>
+		//DataTable
+		$(document).ready(function() {
+			var aTable = $('.Table').DataTable({
+				"scrollY" : true,
+				"ordering" : true,
+				"searching" : true,
+				"aLengthMenu" : [ [ 5, 10, 25, -1 ], [ 5, 10, 25, "Todas" ] ],
+				"pageLength" : 10,
+				"paging" : true,
+				"orderClasses" : false,
+				 "language": {
+			            "lengthMenu": "Mostrando _MENU_ entradas por página",
+			            "zeroRecords": "No se ha encontrado nada - sorry",
+			            "info": "Mostrando _PAGE_ de _PAGES_",
+			            "infoEmpty": "No existe el escenario",
+			            "sProcessing":     "Procesando...",
+			            "sLengthMenu":     "Mostrar _MENU_ registros",
+			            "sZeroRecords":    "No se encontraron resultados",
+			            "sEmptyTable":     "Ningún dato disponible en esta tabla",
+			            "sInfo":           "Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros",
+			            "sInfoEmpty":      "Mostrando registros del 0 al 0 de un total de 0 registros",
+			            "sInfoFiltered":   "(filtrado de un total de _MAX_ registros)",
+			            "sInfoPostFix":    "",
+			            "sSearch":         "Buscar:",
+			            "sUrl":            "",
+			            "sInfoThousands":  ",",
+			            "sLoadingRecords": "Cargando...",
+			            "oPaginate": {
+			                "sFirst":    "Primero",
+			                "sLast":     "Último",
+			                "sNext":     "Siguiente",
+			                "sPrevious": "Anterior"
+			            },
+			            "oAria": {
+			                "sSortAscending":  ": Activar para ordenar la columna de manera ascendente",
+			                "sSortDescending": ": Activar para ordenar la columna de manera descendente"
+			            }
+			        }
+			});
+		});
+		</script>
 	<!--footer-->
 	<footer id="footer"> <%@ include file="Templates/Footer1.html"%>
 	</footer>

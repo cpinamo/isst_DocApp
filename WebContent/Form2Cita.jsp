@@ -63,10 +63,8 @@
 						var currentYear = date.getFullYear();
 						$('#datepicker').datepicker(
 								{
-									minDate : new Date(currentYear,
-											currentMonth, currentDate),
-									maxDate : new Date(currentYear + 1,
-											currentMonth, currentDate),
+									minDate : new Date(currentYear, currentMonth, currentDate),
+									maxDate : new Date(currentYear, currentMonth + 3, currentDate),
 									dateFormat : "dd/mm/yy"
 								}).val();
 					</script>
