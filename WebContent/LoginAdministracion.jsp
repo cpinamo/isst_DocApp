@@ -143,15 +143,7 @@
 			        }
 			});
 		});
-		var date = new Date();
-		var currentMonth = date.getMonth();
-		var currentDate = date.getDate();
-		var currentYear = date.getFullYear();
-		$('#datepicker').datepicker({
-			minDate : new Date(currentYear, currentMonth, currentDate),
-			maxDate : new Date(currentYear, currentMonth + 1, currentDate),
-			dateFormat : "dd/mm/yy"
-		}).val();
+		
 	</script>
 	<!--footer-->
 	<footer id="footer"> <%@ include file="Templates/Footer.html"%>

@@ -23,24 +23,6 @@ public class FormReprogramar1Servlet extends HttpServlet{
 		
 		Cita cita = CitaDAOImplementation.getInstance().readCita(citaId);
 		
-		
-		
-		System.out.println("----------------------");
-		System.out.println("----------------------");
-		System.out.println("----------------------");
-		System.out.println("----------------------");
-		System.out.println("----------------------");
-		System.out.println("----------------------");
-		System.out.println(cita);
-		System.out.println("----------------------");
-		System.out.println("----------------------");
-		System.out.println("----------------------");
-		System.out.println("----------------------");
-		System.out.println("----------------------");
-		
-		//Paciente paciente = cita.getPacienteCita();
-		//req.getSession().setAttribute("paciente", paciente);
-		
 		req.getSession().setAttribute("citaId", citaId);
 		
 		

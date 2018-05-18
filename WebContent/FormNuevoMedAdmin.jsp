@@ -23,7 +23,6 @@
 <input class="col-lg-offset-1 col-lg-2" type = "password" name= "password" placeholder = "Contraseña"/>
 <button class="col-lg-offset-1 col-lg-4" type="submit"> Crear nuevo médico </button>
 
-<p>Date: <input type="text" id="datepicker" name="datepicker"></p>
 <br><br>
 
 </form>
