@@ -27,7 +27,7 @@
 				</div>
 				<div class="collapse navbar-collapse navbar-right" id="myNavbar">
 					<ul class="nav navbar-nav">
-						<li class=""><a href="LoginPaciente.jsp">Mi cuenta</a></li> //direccionar a un servlet para pasar el dato de paciente
+						<li class=""><a href="LoginPaciente.jsp">Mi cuenta</a></li> <!--direccionar a un servlet para pasar el dato de paciente-->
 						<li class="active"><a href="FormLogout.jsp">Logout</a></li>
 					</ul>
 				</div>
@@ -54,11 +54,13 @@
 					<thead>
 						<tr>
 							
-							<th class="col-lg-3">DÍA</th>
+							<th class="col-lg-2">DÍA</th>
 							<th class="col-lg-1">HORA</th>
-							<th class="col-lg-3">MÉDICO</th>
-							<th class="col-lg-3">ESPECIALIDAD</th>
-							<th class="col-lg-2">ID CITA</th>
+							<th class="col-lg-2">MÉDICO</th>
+							<th class="col-lg-2">ESPECIALIDAD</th>
+							<th class="col-lg-1">ID CITA</th>
+							<th class="col-lg-1">Reprogramar</th>
+							<th class="col-lg-1">Asistencia</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -70,6 +72,11 @@
 								<td>${citasi.medicoCita.getName()}</td>
 								<td>${citasi.medicoCita.getEspecialidad()}</td>
 								<td>${citasi.id}</td>
+								<td>
+									<c:if test=""></c:if>
+									
+								</td>
+								<td></td>
 							</tr>
 						</c:forEach>
 					</tbody>

@@ -22,7 +22,7 @@ public class Paciente implements Serializable {
 	private int edad;
 	private int movil;
 	private String domicilio;
-	private String status;
+
 
 	@ManyToMany(fetch = FetchType.EAGER, mappedBy = "pacientes", cascade = { CascadeType.MERGE, CascadeType.PERSIST })
 	private List<Medico> doctores;
@@ -101,14 +101,6 @@ public class Paciente implements Serializable {
 
 	public String getDomicilio() {
 		return domicilio;
-	}
-
-	public String getStatus() {
-		return status;
-	}
-
-	public void setStatus(String status) {
-		this.status = status;
 	}
 
 	public void setDomicilio(String domicilio) {

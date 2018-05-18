@@ -54,6 +54,8 @@
 							<th class="col-lg-1">HORA</th>
 							<th class="col-lg-3">PACIENTE</th>
 							<th class="col-lg-2">ID CITA</th> 
+							<th class="col-lg-2">Estado cita</th>
+							<th class="col-lg-2">Pedir interconsulta</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -63,6 +65,8 @@
 								<td>${citasi.hora}</td>
 								<td>${citasi.pacienteCita.getName()}</td>
 								<td>${citasi.id}</td>
+								<td>${citasi.status}</td>
+								<td></td>
 							</tr>
 						</c:forEach>
 					</tbody>

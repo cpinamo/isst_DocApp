@@ -16,7 +16,17 @@ public class Cita implements Serializable {
 	
 	private String dia;
 	private String hora;
+	private int status;
 	
+	
+
+	public int getStatus() {
+		return status;
+	}
+
+	public void setStatus(int status) {
+		this.status = status;
+	}
 
 	@ManyToOne
 	private Medico medicoCita;

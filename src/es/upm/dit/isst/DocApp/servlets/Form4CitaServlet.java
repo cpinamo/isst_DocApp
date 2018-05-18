@@ -34,6 +34,7 @@ public class Form4CitaServlet extends HttpServlet {
 		cita.setHora(hora);
 		cita.setMedicoCita(doctor);
 		cita.setPacienteCita(pacientePersona);
+		cita.setStatus(1);
 		
 
 
