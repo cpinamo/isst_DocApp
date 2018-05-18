@@ -65,7 +65,15 @@
 								<td>${citasi.hora}</td>
 								<td>${citasi.pacienteCita.getName()}</td>
 								<td>${citasi.id}</td>
-								<td>${citasi.status}</td>
+								
+								<td>
+								<c:if test="${citasi.status == 1}">
+								Todavía no ha asistido
+								</c:if>
+								<c:if test="${citasi.status == 2}">
+								Ha asistido
+								</c:if>
+								</td>
 								<td></td>
 							</tr>
 						</c:forEach>

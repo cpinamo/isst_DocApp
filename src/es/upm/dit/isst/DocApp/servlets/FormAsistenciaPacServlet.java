@@ -11,7 +11,9 @@ import javax.servlet.http.HttpServletResponse;
 import es.upm.dit.isst.DocApp.dao.CitaDAO;
 import es.upm.dit.isst.DocApp.dao.CitaDAOImplementation;
 import es.upm.dit.isst.DocApp.dao.MedicoDAOImplementation;
+import es.upm.dit.isst.DocApp.dao.PacienteDAOImplementation;
 import es.upm.dit.isst.DocApp.dao.model.Cita;
+import es.upm.dit.isst.DocApp.dao.model.Paciente;
 
 
 
@@ -28,7 +30,8 @@ public class FormAsistenciaPacServlet extends HttpServlet{
 	cita.setStatus(2);
 	dao.updateCita(cita);
 	
-	req.getSession().setAttribute("cita", cita);
+	Paciente paciente = cita.getPacienteCita();
+	req.getSession().setAttribute("paciente", paciente);
 	resp.sendRedirect(req.getContextPath() + "/LoginPaciente.jsp");
 	
 	}
