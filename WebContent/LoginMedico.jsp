@@ -50,11 +50,12 @@
 				<table class="table table-hover Table">
 					<thead>
 						<tr>
-							<th class="col-lg-3">DÍA</th>
+							<th class="col-lg-2">DÍA</th>
 							<th class="col-lg-1">HORA</th>
-							<th class="col-lg-3">PACIENTE</th>
-							<th class="col-lg-2">ID CITA</th> 
-							<th class="col-lg-2">Asistencia Paciente</th>
+							<th class="col-lg-2">PACIENTE</th>
+							<th class="col-lg-1">ID CITA</th> 
+							<th class="col-lg-2">INFO CONSULTA</th>
+							<th class="col-lg-2">Informar de retraso</th>
 							<th class="col-lg-2">Pedir interconsulta</th>
 						</tr>
 					</thead>
@@ -68,10 +69,24 @@
 								
 								<td>
 								<c:if test="${citasi.status == 1}">
-								Todavía no ha asistido
+								Paciente no ha asistido
 								</c:if>
 								<c:if test="${citasi.status == 2}">
-								Ha asistido
+									<%@  include file= "FormEmpezarConsulta.jsp" %>
+								</c:if>
+								<c:if test="${citasi.status == 3}">
+									<%@  include file= "FormEmpezarConsulta.jsp" %>
+								</c:if>
+								<c:if test="${citasi.status == 4}">
+									<%@  include file= "FormTerminarConsulta.jsp" %>
+								</c:if>
+								</td>
+								<td>
+								<c:if test="${citasi.status == 2}">
+									<%@  include file= "FormInfoRetraso.jsp" %>
+								</c:if>
+								<c:if test="${citasi.status == 3}">
+									Paciente informado
 								</c:if>
 								</td>
 								<td></td>

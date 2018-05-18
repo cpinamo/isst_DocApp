@@ -61,7 +61,7 @@
 							<th class="col-lg-1">ID CITA</th>
 							<th class="col-lg-1">Reprogramar</th>
 							<th class="col-lg-1">Asistencia</th>
-							<th class="col-lg-1">Cancelar</th>
+							<th class="col-lg-1">INFO</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -82,6 +82,12 @@
 								<td>
 									<c:if test="${citasi.status == 1}"><!-- estaría bien comprobar que sea el mismo día -->
 										<%@ include file = "FormAsistenciaPac.jsp" %>
+									</c:if>
+								</td>
+								
+								<td>
+									<c:if test="${citasi.status == 3}">
+										La consulta va con retraso
 									</c:if>
 								</td>
 								
