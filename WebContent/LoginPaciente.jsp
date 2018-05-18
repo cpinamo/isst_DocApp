@@ -84,7 +84,7 @@
 										<%@ include file = "FormAsistenciaPac.jsp" %>
 									</c:if>
 								</td>
-								</td>
+								
 							</tr>
 						</c:forEach>
 					</tbody>

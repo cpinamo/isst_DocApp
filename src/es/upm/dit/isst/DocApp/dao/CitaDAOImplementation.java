@@ -57,7 +57,7 @@ public class CitaDAOImplementation implements CitaDAO {
 
 		try {
 			session.beginTransaction();
-			cita = session.get(Cita.class, id);
+			cita = session.get(Cita.class, Long.parseLong(id));
 			session.getTransaction().commit();
 		} catch (Exception e) {
 
