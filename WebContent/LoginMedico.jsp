@@ -54,7 +54,7 @@
 							<th class="col-lg-1">HORA</th>
 							<th class="col-lg-3">PACIENTE</th>
 							<th class="col-lg-2">ID CITA</th> 
-							<th class="col-lg-2">Estado cita</th>
+							<th class="col-lg-2">Asistencia Paciente</th>
 							<th class="col-lg-2">Pedir interconsulta</th>
 						</tr>
 					</thead>

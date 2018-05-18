@@ -54,13 +54,14 @@
 					<thead>
 						<tr>
 							
-							<th class="col-lg-2">DÍA</th>
+							<th class="col-lg-1">DÍA</th>
 							<th class="col-lg-1">HORA</th>
 							<th class="col-lg-2">MÉDICO</th>
 							<th class="col-lg-2">ESPECIALIDAD</th>
 							<th class="col-lg-1">ID CITA</th>
 							<th class="col-lg-1">Reprogramar</th>
 							<th class="col-lg-1">Asistencia</th>
+							<th class="col-lg-1">Cancelar</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -73,10 +74,17 @@
 								<td>${citasi.medicoCita.getEspecialidad()}</td>
 								<td>${citasi.id}</td>
 								<td>
-									<c:if test=""></c:if>
-									
+									<c:if test="${citasi.status == 1}">
+										<%@ include file = "FormReprogramar1.jsp" %>
+									</c:if>
 								</td>
-								<td></td>
+								
+								<td>
+									<c:if test="${citasi.status == 1}"><!-- estaría bien comprobar que sea el mismo día -->
+										<%@ include file = "FormAsistenciaPac.jsp" %>
+									</c:if>
+								</td>
+								</td>
 							</tr>
 						</c:forEach>
 					</tbody>
