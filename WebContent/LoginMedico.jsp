@@ -89,7 +89,11 @@
 									Paciente informado
 								</c:if>
 								</td>
-								<td></td>
+								<td>
+								<c:if test="${citasi.status == 4}">
+									<%@  include file= "FormInterconsulta.jsp" %>
+								</c:if>
+								</td>
 							</tr>
 						</c:forEach>
 					</tbody>
