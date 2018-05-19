@@ -47,6 +47,7 @@
 				<p>Email: ${medico.email }</p>
 				<p>Especialidad: ${medico.especialidad }</p>
 				<br>
+				<p>CITAS PENDIENTES</p>
 				<table class="table table-hover Table">
 					<thead>
 						<tr>
@@ -61,6 +62,7 @@
 					</thead>
 					<tbody>
 						<c:forEach items="${citasMedico}" var="citasi">
+						<c:if test="${citasi.status != 5}">
 							<tr>
 								<td>${citasi.dia}</td>
 								<td>${citasi.hora}</td>
@@ -95,6 +97,64 @@
 								</c:if>
 								</td>
 							</tr>
+							</c:if>
+						</c:forEach>
+					</tbody>
+				</table>
+				<br>
+				<br>
+				<br>
+				<p>CITAS TERMINADAS</p>
+				<table class="table table-hover Table">
+					<thead>
+						<tr>
+							<th class="col-lg-2">DÍA</th>
+							<th class="col-lg-1">HORA</th>
+							<th class="col-lg-2">PACIENTE</th>
+							<th class="col-lg-1">ID CITA</th> 
+							<th class="col-lg-2">INFO CONSULTA</th>
+							<th class="col-lg-2">Informar de retraso</th>
+							<th class="col-lg-2">Pedir interconsulta</th>
+						</tr>
+					</thead>
+					<tbody>
+						<c:forEach items="${citasMedico}" var="citasi">
+						<c:if test="${citasi.status == 5}">
+							<tr>
+								<td>${citasi.dia}</td>
+								<td>${citasi.hora}</td>
+								<td>${citasi.pacienteCita.getName()}</td>
+								<td>${citasi.id}</td>
+								
+								<td>
+								<c:if test="${citasi.status == 1}">
+								Paciente no ha asistido
+								</c:if>
+								<c:if test="${citasi.status == 2}">
+									<%@  include file= "FormEmpezarConsulta.jsp" %>
+								</c:if>
+								<c:if test="${citasi.status == 3}">
+									<%@  include file= "FormEmpezarConsulta.jsp" %>
+								</c:if>
+								<c:if test="${citasi.status == 4}">
+									<%@  include file= "FormTerminarConsulta.jsp" %>
+								</c:if>
+								</td>
+								<td>
+								<c:if test="${citasi.status == 2}">
+									<%@  include file= "FormInfoRetraso.jsp" %>
+								</c:if>
+								<c:if test="${citasi.status == 3}">
+									Paciente informado
+								</c:if>
+								</td>
+								<td>
+								<c:if test="${citasi.status == 4}">
+									<%@  include file= "FormInterconsulta.jsp" %>
+								</c:if>
+								</td>
+							</tr>
+							</c:if>
 						</c:forEach>
 					</tbody>
 				</table>
