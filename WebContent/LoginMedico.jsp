@@ -145,7 +145,7 @@
 		});
 		</script>
 	<!--footer-->
-	<footer id="footer"> <%@ include file="Templates/Footer1.html"%>
+	<footer id="footer"> <%@ include file="Templates/Footer3.html"%>
 	</footer>
 	<!--/ footer-->
 	<%@ include file="Templates/Imports.html"%>
