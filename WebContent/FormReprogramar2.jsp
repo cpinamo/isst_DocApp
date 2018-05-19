@@ -41,8 +41,6 @@
 			<section id="doctor-team" class="section-padding">
 			<div class="container jumbotron">
 			
-			
-			
 				<h2>Elegir día</h2>
 				<br>
 				<form action="FormReprogramar2Servlet">
@@ -65,16 +63,18 @@
 				
 					
 					<input type="hidden" name="citaId" value="${citaId}">
-					
 					<br>
-					
 					<button type="submit">Elegir fecha</button>
 				</form>
+				<br><br>
+				<form action="FormCancelarServlet">
+					<div>
+						¿Desea cancelar la cita?
+						<input type="hidden" name="citaId" value="${citaId}">
+						<button class="col-lg-offset-1" type="submit">Cancelar</button>
+					</div>
+				</form>
 			</div>
-			
-			
-			
-			
 			</section>
 		</div>
 	</section>
