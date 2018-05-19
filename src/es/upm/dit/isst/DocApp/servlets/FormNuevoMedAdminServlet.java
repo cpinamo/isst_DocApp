@@ -24,26 +24,8 @@ public class FormNuevoMedAdminServlet extends HttpServlet {
 		String dni = req.getParameter("dni");
 		String especialidad = req.getParameter("especialidades");
 
-		String fecha = req.getParameter("datepicker");
-		try {
-			Date date = new SimpleDateFormat("dd/mm/yy").parse(fecha);
-
-			System.out.println("---");
-			System.out.println("---");
-			System.out.println("---");
-			System.out.println("---");
-			System.out.println("---");
-
-			System.out.println(date);
-
-			System.out.println("---");
-			System.out.println("---");
-			System.out.println("---");
-			System.out.println("---");
-			System.out.println("---");
-		} catch (ParseException e) {
-			e.printStackTrace();
-		}
+	
+		
 		Medico medico = new Medico();
 		medico.setEmail(email);
 		medico.setName(name);

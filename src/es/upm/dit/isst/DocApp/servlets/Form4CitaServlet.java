@@ -41,6 +41,7 @@ public class Form4CitaServlet extends HttpServlet {
 		CitaDAOImplementation.getInstance().createCita(cita);
 		
 		req.getSession().setAttribute("cita_list", CitaDAOImplementation.getInstance().readAllCita());
+		req.getSession().setAttribute("paciente", pacientePersona);
 		resp.sendRedirect(req.getContextPath() + "/FormLogin.jsp");
 	}
 }
