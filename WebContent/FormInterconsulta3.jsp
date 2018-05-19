@@ -54,7 +54,7 @@
 					<input type="hidden" name="paciente" value="${paciente}">
 					<br><br>
 					<div>
-						Date: <input type="text" id="datepicker" name="datepicker">
+						Fecha: <input type="text" id="datepicker" name="datepicker">
 					</div>
 					<script>
 						var date = new Date();

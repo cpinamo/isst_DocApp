@@ -46,7 +46,7 @@
 				<form action="FormReprogramar2Servlet">
 					
 					<div>
-						Date: <input type="text" id="datepicker" name="datepicker">
+						Fecha: <input type="text" id="datepicker" name="datepicker">
 					</div>
 					<script>
 						var date = new Date();
