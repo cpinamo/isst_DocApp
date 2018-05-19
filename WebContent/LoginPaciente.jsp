@@ -65,7 +65,7 @@
 						</tr>
 					</thead>
 					<tbody>
-						<c:forEach items="${paciente.citasPaciente }" var="citasi">
+						<c:forEach items="${citasPaciente }" var="citasi">
 							<tr>
 							
 								<td>${citasi.dia}</td>

@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import es.upm.dit.isst.DocApp.dao.CitaDAOImplementation;
 import es.upm.dit.isst.DocApp.dao.model.Cita;
+import es.upm.dit.isst.DocApp.dao.model.Paciente;
 
 @WebServlet("/FormReprogramar3Servlet")
 public class FormReprogramar3Servlet extends HttpServlet{
@@ -41,11 +42,19 @@ public class FormReprogramar3Servlet extends HttpServlet{
 		cita.setHora(hora);
 		cita.setDia(fecha);
 		
+		Paciente pacienteCita = cita.getPacienteCita();
+		pacienteCita.getCitasPaciente().remove(cita);
+		
 		CitaDAOImplementation.getInstance().updateCita(cita);
+		pacienteCita.getCitasPaciente().add(cita);
+		
+		req.getSession().setAttribute("cita", cita);
+	
 		
 		req.getSession().setAttribute("cita_list", CitaDAOImplementation.getInstance().readAllCita());
-		resp.sendRedirect(req.getContextPath() + "/FormLogin.jsp");
-		
+		req.getSession().setAttribute("paciente", pacienteCita);
+		req.getSession().setAttribute("citasPaciente", pacienteCita.getCitasPaciente());
+		resp.sendRedirect(req.getContextPath() + "/LoginPaciente.jsp");
 		
 	
 	}

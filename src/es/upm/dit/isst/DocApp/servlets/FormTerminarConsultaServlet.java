@@ -28,6 +28,7 @@ public class FormTerminarConsultaServlet extends HttpServlet{
 	
 	Medico medico = cita.getMedicoCita();
 	req.getSession().setAttribute("medico", medico);
+	req.getSession().setAttribute("citasMedico", medico.getCitasMedico());
 	resp.sendRedirect(req.getContextPath() + "/LoginMedico.jsp");
 	
 	}

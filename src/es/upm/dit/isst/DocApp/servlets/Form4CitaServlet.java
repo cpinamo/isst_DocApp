@@ -39,9 +39,14 @@ public class Form4CitaServlet extends HttpServlet {
 
 
 		CitaDAOImplementation.getInstance().createCita(cita);
+		Paciente pacienteCita = cita.getPacienteCita();
+		pacienteCita.getCitasPaciente().add(cita);
+		
+		req.getSession().setAttribute("cita", cita);
 		
 		req.getSession().setAttribute("cita_list", CitaDAOImplementation.getInstance().readAllCita());
-		req.getSession().setAttribute("paciente", pacientePersona);
-		resp.sendRedirect(req.getContextPath() + "/FormLogin.jsp");
+		req.getSession().setAttribute("paciente", pacienteCita);
+		req.getSession().setAttribute("citasPaciente", pacienteCita.getCitasPaciente());
+		resp.sendRedirect(req.getContextPath() + "/LoginPaciente.jsp");
 	}
 }

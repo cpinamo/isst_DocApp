@@ -32,6 +32,7 @@ public class FormAsistenciaPacServlet extends HttpServlet{
 	
 	Paciente paciente = cita.getPacienteCita();
 	req.getSession().setAttribute("paciente", paciente);
+	req.getSession().setAttribute("citasPaciente", paciente.getCitasPaciente());
 	resp.sendRedirect(req.getContextPath() + "/LoginPaciente.jsp");
 	
 	}

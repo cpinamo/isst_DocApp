@@ -41,9 +41,15 @@ public class FormInterconsulta4Servlet extends HttpServlet{
 
 
 		CitaDAOImplementation.getInstance().createCita(cita);
+		Medico medicoCita = cita.getMedicoCita();
+		medicoCita.getCitasMedico().add(cita);
+		
+		req.getSession().setAttribute("cita", cita);
 		
 		req.getSession().setAttribute("cita_list", CitaDAOImplementation.getInstance().readAllCita());
-		resp.sendRedirect(req.getContextPath() + "/FormLogin.jsp");
+		req.getSession().setAttribute("medico", medicoCita);
+		req.getSession().setAttribute("citasMedico", medicoCita.getCitasMedico());
+		resp.sendRedirect(req.getContextPath() + "/LoginMedico.jsp");
 	}
 	
 	

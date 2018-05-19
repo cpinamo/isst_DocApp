@@ -31,9 +31,11 @@ public class LoginServlet extends HttpServlet {
 			resp.sendRedirect(req.getContextPath() + "/LoginAdministracion.jsp");
 		} else if (null != paciente) {
 			req.getSession().setAttribute("paciente", paciente);
+			req.getSession().setAttribute("citasPaciente", paciente.getCitasPaciente());
 			resp.sendRedirect(req.getContextPath() + "/LoginPaciente.jsp");
 		} else if (null != medico) {
 			req.getSession().setAttribute("medico", medico);
+			req.getSession().setAttribute("citasMedico", medico.getCitasMedico());
 			resp.sendRedirect(req.getContextPath() + "/LoginMedico.jsp");
 		} else {
 			resp.sendRedirect(req.getContextPath() + "/FormLogin.jsp");
