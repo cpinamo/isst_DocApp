@@ -24,7 +24,11 @@ public class FormInterconsultaServlet extends HttpServlet{
 		
 		Cita cita = CitaDAOImplementation.getInstance().readCita(citaId);
 		
-		Paciente paciente = cita.getPacienteCita();
+		Paciente pacienteCita = cita.getPacienteCita();
+		
+		int paciente = pacienteCita.getDni();
+		
+		
 		
 		req.getSession().setAttribute("paciente", paciente);
 		
