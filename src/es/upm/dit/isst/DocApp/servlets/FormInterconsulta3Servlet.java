@@ -27,6 +27,10 @@ protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws Se
 	String medico = req.getParameter("doctorCita");
 	Medico doctor = MedicoDAOImplementation.getInstance().readMedico(medico);
 	req.getSession().setAttribute("medico", medico);
+	
+	String doctorSesion = req.getParameter("medico");
+	req.getSession().setAttribute("doctorSesion", doctorSesion);
+	
 
 	String fecha = req.getParameter("datepicker");
 	req.getSession().setAttribute("fecha", fecha);

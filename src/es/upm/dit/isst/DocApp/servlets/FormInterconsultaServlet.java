@@ -20,6 +20,9 @@ public class FormInterconsultaServlet extends HttpServlet{
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
 		String citaId = req.getParameter("citaId");
+		String medico = req.getParameter("medico");
+	
+		req.getSession().setAttribute("medico", medico);
 		
 		
 		Cita cita = CitaDAOImplementation.getInstance().readCita(citaId);

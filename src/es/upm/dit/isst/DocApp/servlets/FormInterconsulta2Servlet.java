@@ -21,6 +21,8 @@ public class FormInterconsulta2Servlet extends HttpServlet{
 
 		String paciente = req.getParameter("paciente");
 		req.getSession().setAttribute("paciente", paciente);
+		String medico = req.getParameter("medico");
+		req.getSession().setAttribute("medico", medico);
 		
 		String especialidad = req.getParameter("especialidades");
 		List<Medico> medico_list = MedicoDAOImplementation.getInstance().readAllMedico();

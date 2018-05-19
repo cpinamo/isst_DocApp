@@ -47,6 +47,7 @@
 <form action = "FormInterconsulta2Servlet">
 
 <input type="hidden" name="paciente" value="${paciente}">
+<input type="hidden" name="medico" value="${medico}">
      
      <div class="col-lg-4" align="center"> 
 		<input name="especialidades" type="image" src="img/alergologia.jpg" value="Alergologia" alt="" height="120px"/>    
