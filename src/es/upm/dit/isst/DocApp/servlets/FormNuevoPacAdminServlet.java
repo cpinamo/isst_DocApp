@@ -12,6 +12,9 @@ import es.upm.dit.isst.DocApp.dao.model.Paciente;
 @WebServlet("/FormNuevoPacAdminServlet")
 public class FormNuevoPacAdminServlet extends HttpServlet {
 
+	private Boolean alerta3=false;
+	private Boolean alerta4=false;
+	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
@@ -24,6 +27,32 @@ public class FormNuevoPacAdminServlet extends HttpServlet {
 		String dni = req.getParameter("dni");
 		String domicilio = req.getParameter("domicilio");
 
+		List<Paciente> paciente_list = PacienteDAOImplementation.getInstance().readAllPaciente();
+		
+		for (Paciente pac : paciente_list) {
+			if(pac.getDni()==Integer.parseInt(dni))	{
+				alerta3 = true;
+			}
+			else {
+				alerta3=false;
+			}
+		}
+		for (Paciente pac : paciente_list) {
+			if(pac.getEmail().equals(email))	{
+				alerta4 = true;
+			}
+			else {
+				alerta4=false;
+			}
+		}
+		
+		if (alerta3==true || alerta4==true) {
+			req.getSession().setAttribute("alerta3", alerta3);
+			req.getSession().setAttribute("alerta4", alerta4);	
+			resp.sendRedirect(req.getContextPath() + "/LoginAdministracion.jsp");
+		}
+		else {
+		
 		Paciente paciente = new Paciente();
 		paciente.setEmail(email);
 		paciente.setName(name);
@@ -38,5 +67,6 @@ public class FormNuevoPacAdminServlet extends HttpServlet {
 
 		req.getSession().setAttribute("paciente_list", PacienteDAOImplementation.getInstance().readAllPaciente());
 		resp.sendRedirect(req.getContextPath() + "/LoginAdministracion.jsp");
+		}
 	}
 }
