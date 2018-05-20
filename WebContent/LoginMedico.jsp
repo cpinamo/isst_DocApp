@@ -54,20 +54,21 @@
 							<th class="col-lg-2">DÍA</th>
 							<th class="col-lg-1">HORA</th>
 							<th class="col-lg-2">PACIENTE</th>
-							<th class="col-lg-1">ID CITA</th> 
+
 							<th class="col-lg-2">INFO CONSULTA</th>
 							<th class="col-lg-2">Informar de retraso</th>
 							<th class="col-lg-2">Pedir interconsulta</th>
+							<th class="col-lg-1">OBSERVACIONES</th>
 						</tr>
 					</thead>
 					<tbody>
 						<c:forEach items="${citasMedico}" var="citasi">
-						<c:if test="${citasi.status != 5}">
+						<c:if test="${citasi.status != 6}">
 							<tr>
 								<td>${citasi.dia}</td>
 								<td>${citasi.hora}</td>
 								<td>${citasi.pacienteCita.getName()}</td>
-								<td>${citasi.id}</td>
+								
 								
 								<td>
 								<c:if test="${citasi.status == 1}">
@@ -82,6 +83,9 @@
 								<c:if test="${citasi.status == 4}">
 									<%@  include file= "FormTerminarConsulta.jsp" %>
 								</c:if>
+								<c:if test="${citasi.status == 5}">
+									<%@  include file= "FormTerminarConsulta.jsp" %>
+								</c:if>
 								</td>
 								<td>
 								<c:if test="${citasi.status == 2}">
@@ -94,6 +98,18 @@
 								<td>
 								<c:if test="${citasi.status == 4}">
 									<%@  include file= "FormInterconsulta.jsp" %>
+								</c:if>
+								<c:if test="${citasi.status == 5}">
+									<%@  include file= "FormInterconsulta.jsp" %>
+								</c:if>
+								</td>
+								<td>
+								<c:if test="${citasi.status == 4}">
+									<%@  include file= "FormSubirArchivo.jsp" %>
+								</c:if>
+								<c:if test="${citasi.status == 5}">
+									<%@  include file= "FormBajarArchivo.jsp" %>
+								
 								</c:if>
 								</td>
 							</tr>
@@ -111,48 +127,21 @@
 							<th class="col-lg-2">DÍA</th>
 							<th class="col-lg-1">HORA</th>
 							<th class="col-lg-2">PACIENTE</th>
-							<th class="col-lg-1">ID CITA</th> 
-							<th class="col-lg-2">INFO CONSULTA</th>
-							<th class="col-lg-2">Informar de retraso</th>
-							<th class="col-lg-2">Pedir interconsulta</th>
+														
+							<th class="col-lg-1">OBSERVACIONES</th> 
 						</tr>
 					</thead>
 					<tbody>
 						<c:forEach items="${citasMedico}" var="citasi">
-						<c:if test="${citasi.status == 5}">
+						<c:if test="${citasi.status == 6}">
 							<tr>
 								<td>${citasi.dia}</td>
 								<td>${citasi.hora}</td>
 								<td>${citasi.pacienteCita.getName()}</td>
-								<td>${citasi.id}</td>
-								
 								<td>
-								<c:if test="${citasi.status == 1}">
-								Paciente no ha asistido
-								</c:if>
-								<c:if test="${citasi.status == 2}">
-									<%@  include file= "FormEmpezarConsulta.jsp" %>
-								</c:if>
-								<c:if test="${citasi.status == 3}">
-									<%@  include file= "FormEmpezarConsulta.jsp" %>
-								</c:if>
-								<c:if test="${citasi.status == 4}">
-									<%@  include file= "FormTerminarConsulta.jsp" %>
-								</c:if>
+									<%@  include file= "FormBajarArchivo.jsp" %>
 								</td>
-								<td>
-								<c:if test="${citasi.status == 2}">
-									<%@  include file= "FormInfoRetraso.jsp" %>
-								</c:if>
-								<c:if test="${citasi.status == 3}">
-									Paciente informado
-								</c:if>
-								</td>
-								<td>
-								<c:if test="${citasi.status == 4}">
-									<%@  include file= "FormInterconsulta.jsp" %>
-								</c:if>
-								</td>
+
 							</tr>
 							</c:if>
 						</c:forEach>

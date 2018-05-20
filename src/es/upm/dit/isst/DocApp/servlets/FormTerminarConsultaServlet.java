@@ -23,7 +23,7 @@ public class FormTerminarConsultaServlet extends HttpServlet{
 	CitaDAO dao = CitaDAOImplementation.getInstance();
 	
 	Cita cita = dao.readCita(citaId);
-	cita.setStatus(5);
+	cita.setStatus(6);
 	dao.updateCita(cita);
 	
 	Medico medico = cita.getMedicoCita();
