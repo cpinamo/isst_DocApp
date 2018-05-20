@@ -72,3 +72,4 @@ public class FormRegistro1PacienteServlet extends HttpServlet {
 		resp.sendRedirect(req.getContextPath() + "/FormLogin.jsp");
 	}
 }
+}

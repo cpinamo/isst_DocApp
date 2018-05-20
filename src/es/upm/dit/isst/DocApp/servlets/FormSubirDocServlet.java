@@ -30,7 +30,7 @@ public class FormSubirDocServlet extends HttpServlet{
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) 
 			throws ServletException, IOException {
 		
-		
+	
 		Part filePart = req.getPart("file");
 		InputStream fileContent = filePart.getInputStream();
 		ByteArrayOutputStream output = new ByteArrayOutputStream();
