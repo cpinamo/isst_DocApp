@@ -77,15 +77,22 @@
 								<td>${citasi.medicoCita.getEspecialidad()}</td>
 								<td>${citasi.id}</td>
 								<td>
+									
 									<c:if test="${citasi.status == 1}">
 										<%@ include file = "FormReprogramar1.jsp" %>
 									</c:if>
+									
 								</td>
 								
 								<td>
+									<c:if test="${citasi.getDia() == fecha}">
 									<c:if test="${citasi.status == 1}"><!-- estaría bien comprobar que sea el mismo día -->
+										
 										<%@ include file = "FormAsistenciaPac.jsp" %>
+									
 									</c:if>
+									</c:if>
+									
 								</td>
 								
 								<td>
