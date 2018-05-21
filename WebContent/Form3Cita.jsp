@@ -43,7 +43,7 @@
 			
 			
 			
-				<h2>Elegir hora y día</h2>
+				<h2>Elegir hora</h2>
 				<br>
 				<form action="Form4CitaServlet">
 				

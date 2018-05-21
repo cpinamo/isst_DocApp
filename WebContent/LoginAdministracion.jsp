@@ -25,6 +25,11 @@
 					<a class="navbar-brand" href="#"><img src="img/logo.png"
 						class="img-responsive" style="width: 140px; margin-top: -16px;"></a>
 				</div>
+				<div class="collapse navbar-collapse navbar-right" id="myNavbar">
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="FormLogout.jsp">Logout</a></li>
+					</ul>
+				</div>
 			</div>
 		</div>
 		</nav>
@@ -140,7 +145,7 @@
 		
 	</script>
 	<!--footer-->
-	<footer id="footer"> <%@ include file="Templates/Footer2.html"%>
+	<footer id="footer"> <%@ include file="Templates/Footer4.html"%>
 	</footer>
 	<!--/ footer-->
 	<%@ include file="Templates/Imports.html"%>
