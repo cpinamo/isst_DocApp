@@ -32,6 +32,8 @@ public class FormNuevoMedAdminServlet extends HttpServlet {
 		String especialidad = req.getParameter("especialidades");
 
 		List<Medico> medico_list = MedicoDAOImplementation.getInstance().readAllMedico();
+		List<Paciente> paciente_list = PacienteDAOImplementation.getInstance().readAllPaciente();
+
 		
 		for (Medico med : medico_list) {
 			if(med.getDni()==Integer.parseInt(dni))	{
@@ -50,7 +52,22 @@ public class FormNuevoMedAdminServlet extends HttpServlet {
 				alerta6 = false;
 			}
 		}
-		
+		for (Paciente pac : paciente_list) {
+			if(pac.getDni()==Integer.parseInt(dni))	{
+				alerta5 = true;
+			}
+			else {
+				alerta5=false;
+			}
+		}
+		for (Paciente pac : paciente_list) {
+			if(pac.getEmail().equals(email))	{
+				alerta6 = true;
+			}
+			else {
+				alerta6=false;
+			}
+		}
 		
 		if (alerta5==true || alerta6==true) {
 			req.getSession().setAttribute("alerta5", alerta5);
