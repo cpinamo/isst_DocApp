@@ -64,6 +64,7 @@
 				<br>
 				<h3>Formulario de creación de Médicos</h3>
 				<%@ include file="FormNuevoMedAdmin.jsp"%>
+				
 				<h4>Listado de médicos</h4>
 				<table class="table table-hover Table">
 					<thead>

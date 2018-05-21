@@ -5,7 +5,7 @@
 		<% session.setAttribute("alerta3", false); %>
 </c:if>
 <c:if test="${alerta4}">
-		<li><p style="color:red;">El email no est√° disponible</p></li>
+		<li><p style="color:red;">El email no est· disponible</p></li>
 		<% session.setAttribute("alerta4", false); %>
 </c:if>
   

@@ -5,7 +5,7 @@
 		<% session.setAttribute("alerta", false); %>
 </c:if>
 <c:if test="${alerta2}">
-		<li><p style="color:red;">El email no está disponible</p></li>
+		<li><p style="color:red;">El email no esta disponible</p></li>
 		<% session.setAttribute("alerta2", false); %>
 </c:if>
   
@@ -14,13 +14,13 @@
 <input class="col-lg-offset-1 col-lg-2" type = "number" name= "dni" placeholder = "DNI"/>
 <br><br>	
 
-<input class="col-lg-6" type = "text" name= "domicilio" placeholder = "Dirección Completa"/>
+<input class="col-lg-6" type = "text" name= "domicilio" placeholder = "Direccion Completa"/>
 <input class="col-lg-offset-1 col-lg-1" type = "number" name= "edad" placeholder = "Edad"/>
-<input class="col-lg-offset-1 col-lg-3" type = "number" name= "movil" placeholder = "Número de teléfono"/>
+<input class="col-lg-offset-1 col-lg-3" type = "number" name= "movil" placeholder = "Numero de telefono"/>
 <br><br>
 
 <input class="col-lg-4" type = "email" name= "email" placeholder = "Email"/>
-<input class="col-lg-offset-1 col-lg-2" type = "password" name= "password" placeholder = "Contraseña"/>
+<input class="col-lg-offset-1 col-lg-2" type = "password" name= "password" placeholder = "Contrase�a"/>
 <button class="col-lg-offset-1 col-lg-4" type="submit"> Crear nuevo paciente </button>
 
 </form>
