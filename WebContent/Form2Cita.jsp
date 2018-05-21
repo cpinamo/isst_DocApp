@@ -40,7 +40,7 @@
 			<!--doctor team-->
 			<section id="doctor-team" class="section-padding">
 			<div class="container jumbotron">
-				<h2>Elegir médico</h2>
+				<h2>Elegir médico y día</h2>
 				<br>
 				<form action="Form3CitaServlet">
 					<div>
@@ -52,9 +52,9 @@
 						</select>
 					</div>
 					<input type="hidden" name="paciente" value="${paciente}">
-					<br><br>
+					
 					<div>
-						Fecha: <input type="text" id="datepicker" name="datepicker">
+						<p class="col-lg-offset-1 col-lg-1"> Fecha: </p><input class="col-lg-2" type="text" id="datepicker" name="datepicker">
 					</div>
 					<script>
 						var date = new Date();
@@ -68,8 +68,8 @@
 									dateFormat : "dd/mm/yy"
 								}).val();
 					</script>
-					<br>
-					<button class="col-lg-2" type="submit">Elegir doctor y dia</button>
+					
+					<button class="col-lg-offset-1 col-lg-2" type="submit">Elegir doctor y dia</button>
 				</form>
 			</div>
 			</section>

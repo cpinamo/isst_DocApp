@@ -27,7 +27,7 @@
 				</div>
 				<div class="collapse navbar-collapse navbar-right" id="myNavbar">
 					<ul class="nav navbar-nav">
-						<li class=""><a href="LoginPaciente.jsp">Mi cuenta</a></li>
+						<li class=""><a href="LoginMedico.jsp">Mi cuenta</a></li>
 						<li class="active"><a href="FormLogout.jsp">Logout</a></li>
 					</ul>
 				</div>
@@ -40,7 +40,7 @@
 			<!--doctor team-->
 			<section id="doctor-team" class="section-padding">
 			<div class="container jumbotron">
-				<h2>Elegir médico</h2>
+				<h2>Elegir médico y día</h2>
 				<br>
 				<form action="FormInterconsulta3Servlet">
 					<div>
@@ -53,9 +53,8 @@
 					</div>
 					<input type="hidden" name="medico" value="${medico}">
 					<input type="hidden" name="paciente" value="${paciente}">
-					<br><br>
 					<div>
-						Fecha: <input type="text" id="datepicker" name="datepicker">
+						<p class="col-lg-offset-1 col-lg-1"> Fecha: </p><input class="col-lg-2" type="text" id="datepicker" name="datepicker">
 					</div>
 					<script>
 						var date = new Date();
@@ -69,15 +68,14 @@
 									dateFormat : "dd/mm/yy"
 								}).val();
 					</script>
-					<br>
-					<button class="col-lg-2" type="submit">Elegir doctor y dia</button>
+					<button class="col-lg-offset-1 col-lg-2" type="submit">Elegir doctor y dia</button>
 				</form>
 			</div>
 			</section>
 		</div>
 	</section>
 	<!--footer-->
-	<footer id="footer"> <%@ include file="Templates/Footer1.html"%>
+	<footer id="footer"> <%@ include file="Templates/Footer3.html"%>
 	</footer>
 	<!--/ footer-->
 	<%@ include file="Templates/Imports.html"%>

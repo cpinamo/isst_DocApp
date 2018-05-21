@@ -27,7 +27,7 @@
 				</div>
 				<div class="collapse navbar-collapse navbar-right" id="myNavbar">
 					<ul class="nav navbar-nav">
-						<li class=""><a href="LoginPaciente.jsp">Mi cuenta</a></li>
+						<li class=""><a href="LoginMedico.jsp">Mi cuenta</a></li>
 						<li class="active"><a href="FormLogout.jsp">Logout</a></li>
 					</ul>
 				</div>
@@ -43,7 +43,7 @@
 			
 			
 			
-				<h2>Elegir hora y día</h2>
+				<h2>Elegir hora</h2>
 				<br>
 				<form action="FormInterconsulta4Servlet">
 				
@@ -70,7 +70,7 @@
 		</div>
 	</section>
 	<!--footer-->
-	<footer id="footer"> <%@ include file="Templates/Footer1.html"%>
+	<footer id="footer"> <%@ include file="Templates/Footer3.html"%>
 	</footer>
 	<!--/ footer-->
 	<%@ include file="Templates/Imports.html"%>
