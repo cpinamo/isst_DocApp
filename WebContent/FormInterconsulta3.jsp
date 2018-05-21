@@ -51,6 +51,7 @@
 							</c:forEach>
 						</select>
 					</div>
+					<input type="hidden" name="medico" value="${medico}">
 					<input type="hidden" name="paciente" value="${paciente}">
 					<br><br>
 					<div>

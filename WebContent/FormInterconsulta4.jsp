@@ -54,6 +54,7 @@
 						</c:forEach>
 					</select> 
 					<input type="hidden" name="fecha" value=${fecha}>
+					<input type="hidden" name="doctorSesion" value="${doctorSesion}">
 					<input type="hidden" name="medico" value="${medico}">
 					<input type="hidden" name="paciente" value="${paciente}">
 					

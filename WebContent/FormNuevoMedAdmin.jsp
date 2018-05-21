@@ -1,5 +1,14 @@
 <form action = "FormNuevoMedAdminServlet">
 
+<c:if test="${alerta5}">
+		<li><p style="color:red;">El DNI es incorrecto</p></li>
+		<% session.setAttribute("alerta5", false); %>
+</c:if>
+<c:if test="${alerta6}">
+		<li><p style="color:red;">El email no esta disponible</p></li>
+		<% session.setAttribute("alerta6", false); %>
+</c:if>
+
 <input class="col-lg-4" type = "text" name= "name" placeholder = "Nombre"/>
 <select class="col-lg-offset-1 col-lg-4" name="especialidades">
 	<option value="" disabled selected>Elija una especialidad</option>

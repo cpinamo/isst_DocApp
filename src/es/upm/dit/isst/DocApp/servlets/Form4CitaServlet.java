@@ -2,6 +2,8 @@ package es.upm.dit.isst.DocApp.servlets;
 
 import java.io.IOException;
 import java.security.Principal;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -28,6 +30,10 @@ public class Form4CitaServlet extends HttpServlet {
 		Medico doctor = MedicoDAOImplementation.getInstance().readMedico(medico);
 		Paciente pacientePersona = PacienteDAOImplementation.getInstance().readPaciente(dni);
 		
+		Date ahora = new Date();
+	    SimpleDateFormat formateador = new SimpleDateFormat("dd/MM/yyyy");
+	    String dia = formateador.format(ahora);
+		
 
 		Cita cita = new Cita();
 		cita.setDia(fecha);
@@ -47,6 +53,7 @@ public class Form4CitaServlet extends HttpServlet {
 		req.getSession().setAttribute("cita_list", CitaDAOImplementation.getInstance().readAllCita());
 		req.getSession().setAttribute("paciente", pacienteCita);
 		req.getSession().setAttribute("citasPaciente", pacienteCita.getCitasPaciente());
+		req.getSession().setAttribute("fecha", dia);
 		resp.sendRedirect(req.getContextPath() + "/LoginPaciente.jsp");
 	}
 }

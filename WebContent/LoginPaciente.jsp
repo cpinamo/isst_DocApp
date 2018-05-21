@@ -50,6 +50,8 @@
 				<input type="hidden" name="paciente" value=${paciente.dni}>
 				<button class="col-lg-2" type="submit">Pedir cita</button> <br><br><br>
 				</form>
+				<br>
+				<p>CITAS PENDIENTES</p>
 				<table class="table table-hover Table">
 					<thead>
 						<tr>
@@ -66,23 +68,31 @@
 					</thead>
 					<tbody>
 						<c:forEach items="${citasPaciente }" var="citasi">
-							<tr>
 							
+							<c:if test="${citasi.status != 6}">
+							<tr>
 								<td>${citasi.dia}</td>
 								<td>${citasi.hora}</td>
 								<td>${citasi.medicoCita.getName()}</td>
 								<td>${citasi.medicoCita.getEspecialidad()}</td>
 								<td>${citasi.id}</td>
 								<td>
+									
 									<c:if test="${citasi.status == 1}">
 										<%@ include file = "FormReprogramar1.jsp" %>
 									</c:if>
+									
 								</td>
 								
 								<td>
+									<c:if test="${citasi.getDia() == fecha}">
 									<c:if test="${citasi.status == 1}"><!-- estaría bien comprobar que sea el mismo día -->
+										
 										<%@ include file = "FormAsistenciaPac.jsp" %>
+									
 									</c:if>
+									</c:if>
+									
 								</td>
 								
 								<td>
@@ -90,8 +100,48 @@
 										La consulta va con retraso
 									</c:if>
 								</td>
-								
+							
 							</tr>
+							</c:if>
+							
+						</c:forEach>
+					</tbody>
+				</table>
+				<br>
+				<br>
+				<br>
+				<p>CITAS TERMINADAS</p>
+				<table class="table table-hover Table">
+					<thead>
+						<tr>
+						
+							<th class="col-lg-1">DÍA</th>
+							<th class="col-lg-1">HORA</th>
+							<th class="col-lg-2">MÉDICO</th>
+							<th class="col-lg-2">ESPECIALIDAD</th>
+							
+							<th class="col-lg-1">INFO</th>
+						</tr>
+					</thead>
+					<tbody>
+						<c:forEach items="${citasPaciente }" var="citasi">
+							
+							<c:if test="${citasi.status == 6}">
+							
+							<tr>
+								<td>${citasi.dia}</td>
+								<td>${citasi.hora}</td>
+								<td>${citasi.medicoCita.getName()}</td>
+								<td>${citasi.medicoCita.getEspecialidad()}</td>
+	
+								
+								<td>
+										<%@  include file= "FormBajarArchivo2.jsp" %>
+				
+								</td>
+							</tr>
+							</c:if>
+							
 						</c:forEach>
 					</tbody>
 				</table>

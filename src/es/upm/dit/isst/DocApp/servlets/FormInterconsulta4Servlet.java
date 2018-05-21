@@ -26,9 +26,17 @@ public class FormInterconsulta4Servlet extends HttpServlet{
 		String fecha = req.getParameter("fecha");
 		String medico = req.getParameter("medico");
 		String paciente = req.getParameter("paciente");
+		String doctorSes = req.getParameter("doctorSesion");
+		
+		
+		
+		
 		int dni = Integer.parseInt(paciente);
-		Medico doctor = MedicoDAOImplementation.getInstance().readMedico(medico);
 		Paciente pacientePersona = PacienteDAOImplementation.getInstance().readPaciente(dni);
+		Medico doctor = MedicoDAOImplementation.getInstance().readMedico(medico);
+		
+		Medico doctorSesion = MedicoDAOImplementation.getInstance().readMedico(doctorSes);
+		
 		
 
 		Cita cita = new Cita();
@@ -42,13 +50,18 @@ public class FormInterconsulta4Servlet extends HttpServlet{
 
 		CitaDAOImplementation.getInstance().createCita(cita);
 		Medico medicoCita = cita.getMedicoCita();
-		medicoCita.getCitasMedico().add(cita);
+		
+		if(medicoCita.getEmail().equals(doctorSesion.getEmail())){
+			doctorSesion.getCitasMedico().add(cita);
+		}else {
+			medicoCita.getCitasMedico().add(cita);
+		}
 		
 		req.getSession().setAttribute("cita", cita);
 		
 		req.getSession().setAttribute("cita_list", CitaDAOImplementation.getInstance().readAllCita());
-		req.getSession().setAttribute("medico", medicoCita);
-		req.getSession().setAttribute("citasMedico", medicoCita.getCitasMedico());
+		req.getSession().setAttribute("medico", doctorSesion);
+		req.getSession().setAttribute("citasMedico", doctorSesion.getCitasMedico());
 		resp.sendRedirect(req.getContextPath() + "/LoginMedico.jsp");
 	}
 	

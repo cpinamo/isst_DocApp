@@ -1,5 +1,14 @@
 <form action = "FormNuevoPacAdminServlet">
 
+<c:if test="${alerta3}">
+		<li><p style="color:red;">El DNI es incorrecto</p></li>
+		<% session.setAttribute("alerta3", false); %>
+</c:if>
+<c:if test="${alerta4}">
+		<li><p style="color:red;">El email no está disponible</p></li>
+		<% session.setAttribute("alerta4", false); %>
+</c:if>
+  
 <input class="col-lg-3" type = "text" name= "name" placeholder = "Nombre"/>
 <input class="col-lg-offset-1 col-lg-5" type = "text" name= "apellido" placeholder = "Apellidos"/>
 <input class="col-lg-offset-1 col-lg-2" type = "number" name= "dni" placeholder = "DNI"/>

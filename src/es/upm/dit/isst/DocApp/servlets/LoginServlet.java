@@ -1,6 +1,9 @@
 package es.upm.dit.isst.DocApp.servlets;
 
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -21,6 +24,13 @@ public class LoginServlet extends HttpServlet {
 
 		String email = req.getParameter("email");
 		String password = req.getParameter("password");
+		
+		Date ahora = new Date();
+	    SimpleDateFormat formateador = new SimpleDateFormat("dd/MM/yyyy");
+	    String fecha = formateador.format(ahora);
+	    
+	    
+	    System.out.println(fecha);
 
 		Paciente paciente = PacienteDAOImplementation.getInstance().loginPaciente(email, password);
 		Medico medico = MedicoDAOImplementation.getInstance().loginMedico(email, password);
@@ -30,6 +40,7 @@ public class LoginServlet extends HttpServlet {
 			req.getSession().setAttribute("medico_list", MedicoDAOImplementation.getInstance().readAllMedico());
 			resp.sendRedirect(req.getContextPath() + "/LoginAdministracion.jsp");
 		} else if (null != paciente) {
+			req.getSession().setAttribute("fecha", fecha);
 			req.getSession().setAttribute("paciente", paciente);
 			req.getSession().setAttribute("citasPaciente", paciente.getCitasPaciente());
 			resp.sendRedirect(req.getContextPath() + "/LoginPaciente.jsp");

@@ -1,6 +1,8 @@
 package es.upm.dit.isst.DocApp.servlets;
 
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -22,6 +24,11 @@ public class FormReprogramar3Servlet extends HttpServlet{
 		String citaId = req.getParameter("citaId");
 		
 		Cita cita = CitaDAOImplementation.getInstance().readCita(citaId);
+		
+		Date ahora = new Date();
+	    SimpleDateFormat formateador = new SimpleDateFormat("dd/MM/yyyy");
+	    String dia = formateador.format(ahora);
+		
 		
 		
 		
@@ -48,6 +55,7 @@ public class FormReprogramar3Servlet extends HttpServlet{
 		CitaDAOImplementation.getInstance().updateCita(cita);
 		pacienteCita.getCitasPaciente().add(cita);
 		
+		req.getSession().setAttribute("fecha", dia);
 		req.getSession().setAttribute("cita", cita);
 		req.getSession().setAttribute("cita_list", CitaDAOImplementation.getInstance().readAllCita());
 		req.getSession().setAttribute("paciente", pacienteCita);

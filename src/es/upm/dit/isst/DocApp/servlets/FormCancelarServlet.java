@@ -1,6 +1,8 @@
 package es.upm.dit.isst.DocApp.servlets;
 
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -23,9 +25,15 @@ public class FormCancelarServlet extends HttpServlet{
 		Cita cita = CitaDAOImplementation.getInstance().readCita(citaId);
 		CitaDAOImplementation.getInstance().deleteCita(cita);
 		
+		Date ahora = new Date();
+	    SimpleDateFormat formateador = new SimpleDateFormat("dd/MM/yyyy");
+	    String dia = formateador.format(ahora);
+		
 		Paciente pacienteCita = cita.getPacienteCita();
 		pacienteCita.getCitasPaciente().remove(cita);
 		
+		
+		req.getSession().setAttribute("fecha", dia);
 		req.getSession().setAttribute("cita", cita);
 		req.getSession().setAttribute("cita_list", CitaDAOImplementation.getInstance().readAllCita());
 		req.getSession().setAttribute("paciente", pacienteCita);
